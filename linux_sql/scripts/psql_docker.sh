@@ -24,13 +24,17 @@ case $cmd in
     exit1
   fi
   #create container
+  #get latest postgres image
   docker pull postgres
+  #create a new volume if not exist
   docker volume create $db_username
 
   #start the container
+  #create a container using psql image with name = jrvs-psql
   docker run --name jrvs-psql -e POSTGRES_PASSWORD=$db_password -d\
     -v $db_username:/var/lib/postgresql/data -p 5432:5432 postgres:9.6-alpine
 
+  ##check `jrvs-psql` is powered on
   docker ps -f name=jrvs-psql
   exit $?
   ;;
