@@ -26,7 +26,7 @@ script* to make the program automatically create docker instance, create table a
 ## Quick Start
 Use markdown code block for your quick-start commands.
 Using the psql_docker.sh file to create the PSQL instance(make sure docker installed).
-```console
+```
 #script usage
 ./scripts/psql_docker.sh start|stop|create [db_username][db_password]
 
@@ -38,6 +38,70 @@ Using the psql_docker.sh file to create the PSQL instance(make sure docker insta
 
 #to stop the psql docker container
 ./scripts/psql_docker stop
+
+```
+Create a database using psql CLI
+```
+#make sure the docker container is running
+docker ps -f name=jrvs-psql
+
+#install psql CLI client
+sudo yum install -y postgresql
+
+#set password for default user `postgres`
+export PGPASSWORD='yourpassword'
+
+#connect to the psql instance without password
+psql -h localhost -U postgres -w
+
+#create database
+postgres=# CREATE DATABASE host_agent;
+
+#exit database
+postgres=# \q;
+
+```
+Create tables to store hardware specification and resource usage data
+```
+
+#create 'host_info' table and 'host_usage' table if not exist
+#execute ddl.sql script on the host_agent database to create the table
+psal -h localhost -U postgres -d host_agent -f sql/ddl.sql
+
+```
+
+Execute  host_info.sh to collect hardware specification data and then inserts the data into the psql
+instance.
+```
+#script usage
+./scripts/host_info.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]
+
+#script example
+./scripts/host_info.sh localhost 5432 host_agent postgres password
+
+```
+
+Execute  host_usage.sh to collect server usage data and then inserts the data into the psql
+instance.
+```
+#script usage
+./scripts/host_usage.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]
+
+#script example
+./scripts/host_usage.sh localhost 5432 host_agent postgres password
+
+```
+
+Execute host_usage.sh every minute to generate real-time server source usage data and insert 
+data into the database.
+```
+#edit crontab jobs
+bach > crontab -e
+
+#execute host_usage.sh every minute(add this to crontab)
+* * * * * [absolute path of host_usage.sh] [psql_host] [psql_port] [db_name] [psql_user] [psql_password]
+#example
+* * * * * /home/centos/dev/jarvis_data_eng_Enzuo/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password
 
 ```
 
