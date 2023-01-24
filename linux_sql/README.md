@@ -24,7 +24,22 @@ script* to make the program automatically create docker instance, create table a
 - **PostgreSQL:** store the server's hardware and real-time usage data.
 
 ## Quick Start
+Use markdown code block for your quick-start commands.
+Using the psql_docker.sh file to create the PSQL instance(make sure docker installed).
+```
+#script usage
+./scripts/psql_docker.sh start|stop|create [db_username][db_password]
 
+#if first time, use create to create a psql docker container
+./scripts/psql_docker.sh create db_username db_password
+
+#to start the psql docker container
+./scripts/psql_docker start
+
+#to stop the psql docker container
+./scripts/psql_docker stop
+
+```
 ## Implementation
 
 ### Architecture
