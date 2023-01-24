@@ -26,7 +26,7 @@ script* to make the program automatically create docker instance, create table a
 ## Quick Start
 Use markdown code block for your quick-start commands.
 Using the psql_docker.sh file to create the PSQL instance(make sure docker installed).
-```
+```console
 #script usage
 ./scripts/psql_docker.sh start|stop|create [db_username][db_password]
 
@@ -40,6 +40,7 @@ Using the psql_docker.sh file to create the PSQL instance(make sure docker insta
 ./scripts/psql_docker stop
 
 ```
+
 ## Implementation
 
 ### Architecture
