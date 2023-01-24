@@ -100,12 +100,20 @@ bach > crontab -e
 
 #execute host_usage.sh every minute(add this to crontab)
 * * * * * [absolute path of host_usage.sh] [psql_host] [psql_port] [db_name] [psql_user] [psql_password]
+
 #example
 * * * * * /home/centos/dev/jarvis_data_eng_Enzuo/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password
 
 ```
 
 ## Implementation
+1. Create a Linux server running with centos 7 and install the docker.
+2. Create a psql instance using docker.
+3. Install psql CLI client and Setup RDBMS psql database.
+4. Create 'host_info' table to store the hardware information and  'host_usage' table to store the real-time server usage data.
+5. Create agent for collecting hardware specification data and insert the data into database.
+6. Create agent for collecting server usage data and then inserts the data into database.
+7. Using crontab to automate 'host_usage' agent to generate real-time server usage data.
 
 ### Architecture
 
