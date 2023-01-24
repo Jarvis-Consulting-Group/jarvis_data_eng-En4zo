@@ -15,14 +15,16 @@ of each server and monitor the real-time states of the server's resource usage. 
 use the data to generate reports for future resource planning purposes.
 
 #### Technologies used?
-
-- **Git&Git Repository:**
-- **Docker:**
-- **JRV:**
-- **Bash script&Linux Command:**
-- **PostgreSQL:**
-
-
+In this project, we use *git* to manage the code and use *git repository* to store the code.
+The project was built and tested on *JRV(Jarvis Remote Desktop)*. We create *PSQL* Instance using
+*docker* and connect the PSQL instance using *PSQL CLI tools*. We also write *bash script* and *ddl sql
+script* to make the program automatically create docker instance, create table and insert date into
+ the database.
+- **Git&Git Repository:** manage and store the code.
+- **Docker:** provision the PSQL instance.
+- **JRV:** a remote desktop running centos 7.
+- **Bash script&Linux Command:** implement the project.
+- **PostgreSQL:** store the server's hardware and real-time usage data.
 
 ## Quick Start
 
