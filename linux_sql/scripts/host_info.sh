@@ -33,11 +33,11 @@ insert_stmt="INSERT INTO host_info(
                   hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz,
                   l2_cache, timestamp, total_mem
                 )
-              VALUES
-              (
-                '$hostname', '$cpu_number', '$cpu_architecture', '$cpu_model',
-                '$cpu_mhz', '${l2_cache%%K}', '$timestamp', '$total_mem'
-              )";
+                VALUES
+                (
+                  '$hostname', '$cpu_number', '$cpu_architecture', '$cpu_model',
+                  '$cpu_mhz', '${l2_cache%%K}', '$timestamp', '$total_mem'
+                )";
 
 #set up env var
 export PGPASSWORD=$psql_password
