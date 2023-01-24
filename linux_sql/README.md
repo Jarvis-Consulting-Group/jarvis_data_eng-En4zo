@@ -16,11 +16,11 @@ use the data to generate reports for future resource planning purposes.
 
 #### Technologies used?
 
--**Git&Git Repository:**
--**Docker:**
--**JRV:**
--**Bash script&Linux Command:**
--**PostgreSQL:**
+- **Git&Git Repository:**
+- **Docker:**
+- **JRV:**
+- **Bash script&Linux Command:**
+- **PostgreSQL:**
 
 
 
