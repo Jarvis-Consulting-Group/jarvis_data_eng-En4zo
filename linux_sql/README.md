@@ -24,7 +24,6 @@ script* to make the program automatically create docker instance, create table a
 - **PostgreSQL:** store the server's hardware and real-time usage data.
 
 ## Quick Start
-Use markdown code block for your quick-start commands.
 Using the psql_docker.sh file to create the PSQL instance(make sure docker installed).
 ```
 #script usage
@@ -92,7 +91,7 @@ instance.
 
 ```
 
-Execute host_usage.sh every minute to generate real-time server source usage data and insert 
+Execute host_usage.sh every minute to generate real-time server source usage data and insert
 data into the database.
 ```
 #edit crontab jobs
@@ -134,7 +133,7 @@ This section will describe each shell script.
 - *host_usage.sh:*
   - The usage of host_usage.sh is to collect server usage data and then inserts the data into the psql database.\
     The script contains five input variables, psql_host, psql_port, db_name, psql_user, psql_password.\
-    The script fist check the number sof the input arguments, then it collect the usage of hardware information\
+    The script fist check the number of the input arguments, then it collect the usage of hardware information\
     "timestamp", host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available and insert the usage specification\
     into the psql database.
 - *crontab:*
@@ -157,7 +156,24 @@ This section will describe each shell script.
   - The table has foreign key constraint named host_usage_info_fk which is host_id reference id in the host_info table.
 
 ## Test
-
+- Test psql_docker.sh
+  ```
+  docker container ls -a -f name=jrvs-psql
+  
+  ```
+  Result:
+  | CONTAINER ID | IMAGE | COMMAND | CREATED | STATUS |PORTS | NAMES |
+  | --- | --- | --- | --- | --- | --- | --- |
+  | 493232fb98d6 | postgres:9.6-alpine | "docker-entrypoint.s…" | 5 days ago | Up 35 hours | 0.0.0.0:5432->5432/tcp, :::5432->5432/tcp | jrvs-psql |
+- Test host_info.sh
+- Test host_usage.sh
+- Test crontab setup
 ## Deployment
+1. Downloading code from Github.
+2. Installing docker.
+3. Create psql instance using psql_docker.sh
+4. Create tables using ddl.sql
+5. Insert hardware specification into the database using host_info.sh
+6. Setup Crontab to execute host_usage.sh every minute to insert hardware usage data into the database every minute.
 
 ## Improvements
