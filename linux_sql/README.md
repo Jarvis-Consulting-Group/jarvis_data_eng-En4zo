@@ -119,6 +119,13 @@ bach > crontab -e
 #### This is the architecture of the entire project.
 ![This is  the architecture](./assets/architecture.png)
 ### Scripts
+This section will describe each shell script.
+- psql_docker.sh
+  ddfsfsdf 
+- host_info.sh
+- host_usage.sh
+- crontab
+- queries.sql (describe what business problem you are trying to resolve)
 
 ### Database Modeling
 
