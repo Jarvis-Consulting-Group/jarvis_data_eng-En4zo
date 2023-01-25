@@ -1,4 +1,5 @@
 #! /bin/sh
+
 cmd=$1
 db_username=$2
 db_password=$3
@@ -6,11 +7,11 @@ db_password=$3
 #start the docker container
 sudo systemctl status docker || systemctl start docker
 
-#chech the container status
+#check the container status
 docker container inspect jrvs-psql
 container_status=$?
 
-#swich case to create, start or stop
+#switch case to create, start or stop
 case $cmd in
   create)
   #check if container already exist
