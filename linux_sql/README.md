@@ -117,7 +117,7 @@ bach > crontab -e
 
 ### Architecture
 #### This is the architecture of the entire project.
-![THis is  the architecture](/assets/architecture.png)
+![This is  the architecture](./assets/architecture.png)
 ### Scripts
 
 ### Database Modeling
