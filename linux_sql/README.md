@@ -1,22 +1,21 @@
 #Linux Cluster Monitoring Agent
 ## Introduction
 #### What does this project do?
-In this project, we are writing several shell script files that record the 
-server's hardware information and monitor the server's resource usage in real-time(once a minute).
-After that, the data will be stored in an RDBMS(PpstgreSQL in this project) for future planning purpose.
+In this project, we are creating several shell scripts to gather and record the hardware information of the server, 
+as well as continuously monitor its resource usage on a minute-by-minute basis. The collected data will then be stored 
+in a PostgreSQL RDBMS for future reference and planning.
 
 #### Who are the users?
-Originally,the project is designed for the *Jarvis Linux Cluster Administration(LCA)* team which
-manages a Linux cluster of 10 servers. The LCA team would like to collect the hardware specification
-of each server and monitor the real-time states of the server's resource usage. The LCA team will
-use the data to generate reports for future resource planning purposes.
+The project was initially created for the Jarvis Linux Cluster Administration (LCA) team, which is responsible for 
+managing a Linux cluster of 10 servers. The LCA team needs to gather the hardware specifications of each server 
+and continuously monitor their resource usage in real-time. The collected data will be used to generate reports for 
+future resource planning and management.
 
 #### Technologies used?
-In this project, we use *git* to manage the code and use *git repository* to store the code.
-The project was built and tested on *JRV(Jarvis Remote Desktop)*. We create *PSQL* Instance using
-*docker* and connect the PSQL instance using *PSQL CLI tools*. We also write *bash script* and *ddl sql
-script* to make the program automatically create docker instance, create table and insert date into
- the database.
+In this project, we utilize *git* for code management and utilize a *git repository* for code storage. The project was 
+constructed and tested on *Jarvis Remote Desktop (JRV)*. We create a *PSQL* instance using *docker* and connect to it through 
+the use of PSQL CLI tools. Additionally, we have written *bash scripts* and *DDL* SQL scripts to automate the process of 
+creating a docker instance, creating tables, and inserting data into the database.
 - **Git&Git Repository:** manage and store the code.
 - **Docker:** provision the PSQL instance.
 - **JRV:** a remote desktop running centos 7.
@@ -62,7 +61,7 @@ postgres=# CREATE DATABASE host_agent;
 postgres=# \q;
 
 ```
-Create tables to store hardware specification and resource usage data
+Create tables to store hardware specification and resource usage data.
 ```bash
 
 #create 'host_info' table and 'host_usage' table if not exist
