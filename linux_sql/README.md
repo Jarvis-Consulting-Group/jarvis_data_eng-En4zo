@@ -24,8 +24,6 @@ script* to make the program automatically create docker instance, create table a
 - **PostgreSQL:** store the server's hardware and real-time usage data.
 
 ## Quick Start
-<details><summary>CLICK ME</summary>
-<p>
 Using the psql_docker.sh file to create the PSQL instance(make sure docker installed).
 ```
 #script usage
@@ -106,12 +104,8 @@ bach > crontab -e
 * * * * * /home/centos/dev/jarvis_data_eng_Enzuo/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password
 
 ```
-</p>
-</details>
 
 ## Implementation
-<details><summary>CLICK ME</summary>
-<p>
 1. Create a Linux server running with centos 7 and install the docker.
 2. Create a psql instance using docker.
 3. Install psql CLI client and Setup RDBMS psql database.
@@ -119,20 +113,11 @@ bach > crontab -e
 5. Create agent for collecting hardware specification data and insert the data into database.
 6. Create agent for collecting server usage data and then inserts the data into database.
 7. Using crontab to automate 'host_usage' agent to generate real-time server usage data.
-</p>
-</details>
 
 ### Architecture
-<details><summary>CLICK ME</summary>
-<p>
 #### This is the architecture of the entire project.
 ![This is  the architecture](./assets/architecture.png)
-</p>
-</details>
-
 ### Scripts
-<details><summary>CLICK ME</summary>
-<p>
 This section will describe each shell script.
 - *psql_docker.sh:*
   - The usage of psql_docker.sh is to create instance of psql database within docker container.\
@@ -156,12 +141,8 @@ This section will describe each shell script.
     The crontab run host_usage.sh every minute therefore the host_usage.sh will store hardware usage specification\
     into psql database every minute.
 - *queries.sql:* (describe what business problem you are trying to resolve)
-</p>
-</details>
 
 ### Database Modeling
-<details><summary>CLICK ME</summary>
-<p>
 - *host_info:*
   - The usage of this table is to store the hardware data of each linux host.\
     The table store nine types of information which are id, hostname, cpu_number, cpu_architecture, cpu_model,\
@@ -173,12 +154,8 @@ This section will describe each shell script.
     The table store seven types of information which are timestamp, host_id, memory_free, cpu_idle, cpu_kernel,\
     disk_io, disk_available.
   - The table has foreign key constraint named host_usage_info_fk which is host_id reference id in the host_info table.
-</p>
-</details>
 
 ## Test
-<details><summary>CLICK ME</summary>
-<p>
 - Test psql_docker.sh
   ```
   #check if `jrvs-psql` container is running
@@ -211,7 +188,6 @@ This section will describe each shell script.
   | timestamp | host_id | memory_free | cpu_idle | cpu_kernel | disk_io | disk_available |
   | --- | --- | --- | --- | --- | --- | --- |
   | 2023-01-24 04:16:57 | 1 | 3340 | 87 | 3 | 0 | 22450 |
-
 - Test crontab setup
   ```sql
   --check the usage data in the database
@@ -228,20 +204,14 @@ This section will describe each shell script.
   | 2023-01-24 04:17:00 | 1 | 3340 | 90 | 3 | 0 | 22450 |
   | --- | --- | --- | --- | --- | --- | --- |
   | 2023-01-24 04:17:01 | 1 | 3340 | 93 | 0 | 0 | 22450 |
-</p>
-</details>
 
 ## Deployment
-<details><summary>CLICK ME</summary>
-<p>
 1. Downloading code from Github.
 2. Installing docker.
 3. Create psql instance using psql_docker.sh
 4. Create tables using ddl.sql
 5. Insert hardware specification into the database using host_info.sh
 6. Setup Crontab to execute host_usage.sh every minute to insert hardware usage data into the database every minute.
-</p>
-</details>
 
 ## Improvements
 <details><summary>CLICK ME</summary>
