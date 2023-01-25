@@ -121,9 +121,9 @@ bach > crontab -e
 ### Scripts
 This section will describe each shell script.
 - *psql_docker.sh:*
-  - The usage of psql_docker.sh is to create instance of psql database within docker container.__
-    The script contains three variables, input command, username and password.__
-    The script first check the status of docker container, after that the shell script will__
+  - The usage of psql_docker.sh is to create instance of psql database within docker container.\
+    The script contains three variables, input command, username and password.\
+    The script first check the status of docker container, after that the shell script will\
     switch case base to create, start or stop the container base on the input command.
 - *host_info.sh:*
 - *host_usage.sh:*
