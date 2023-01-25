@@ -116,7 +116,8 @@ bach > crontab -e
 7. Using crontab to automate 'host_usage' agent to generate real-time server usage data.
 
 ### Architecture
-
+#### This is the architecture of the entire project.
+![THis is  the architecture](/assets/architecture.png)
 ### Scripts
 
 ### Database Modeling
