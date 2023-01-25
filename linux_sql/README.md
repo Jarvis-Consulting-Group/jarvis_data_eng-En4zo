@@ -214,10 +214,6 @@ This section will describe each shell script.
 6. Setup Crontab to execute host_usage.sh every minute to insert hardware usage data into the database every minute.
 
 ## Improvements
-<details><summary>CLICK ME</summary>
-<p>
 1. Collecting the input and output of the internal net(based on switch).
 2. Create a GUI of monitoring app.
 3. Collecting the data of usage of hardware against battery usage.
-</p>
-</details>
