@@ -18,7 +18,7 @@ hostname=$(hostname -f)
 #run top once to get current cpu usage
 cpu_info=$(top -bn1)
 
-#Retrieve hardware specification variables
+#Retrieve hardware usage specification variables
 memory_free=$(echo "$vmstate_mb" | awk '{print $4}' | tail -n1 | xargs)
 cpu_idle=$(echo "$cpu_info" | grep "Cpu(s)" | awk '{print $8}')
 cpu_kernel=$(echo "$cpu_info" | grep "Cpu(s)" | awk '{print $4}')

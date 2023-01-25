@@ -122,15 +122,39 @@ bach > crontab -e
 This section will describe each shell script.
 - *psql_docker.sh:*
   - The usage of psql_docker.sh is to create instance of psql database within docker container.\
-    The script contains three variables, input command, username and password.\
-    The script first check the status of docker container, after that the shell script will\
-    switch case base to create, start or stop the container base on the input command.
+    The script contains three input variables, input command, username and password.\
+    The script first check the status of docker container, after that the shell script will switch case base to \
+    create, start or stop the container base on the input command.
 - *host_info.sh:*
+  - The usage of host_info.sh is to collect hardware specification data and then inserts the data into psql instance.\
+    The script contains five input variables, psql_host, psql_port, db_name, psql_user, psql_password.\
+    The script first check the numbers of the input arguments, then it collect the hardware information hostname,\
+    cpu_number, cpu_architecture, cpu_model, cpu_mhz, l2_cache, timestamp, total_mem and insert the specification into\
+    the psql database.
 - *host_usage.sh:*
+  - The usage of host_usage.sh is to collect server usage data and then inserts the data into the psql database.\
+    The script contains five input variables, psql_host, psql_port, db_name, psql_user, psql_password.\
+    The script fist check the number sof the input arguments, then it collect the usage of hardware information\
+    "timestamp", host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available and insert the usage specification\
+    into the psql database.
 - *crontab:*
+  - The usage of crontab is to deploy the monitoring app on each server and collect data every minute.\
+    The crontab run host_usage.sh every minute therefore the host_usage.sh will store hardware usage specification\
+    into psql database every minute.
 - *queries.sql:* (describe what business problem you are trying to resolve)
 
 ### Database Modeling
+- *host_info:*
+  - The usage of this table is to store the hardware data of each linux host.\
+    The table store nine types of information which are id, hostname, cpu_number, cpu_architecture, cpu_model,\
+    cpu_mhz, l2_cache, timestamp and total_mem.
+  - The table has primary key constraint named host_info_pk which is id.\
+    The table has unique constraint named host_info_un which is hostname.
+- *host_usage:*
+  - The usage of this table is to store the usage of hardware data of each linux host.\
+    The table store seven types of information which are timestamp, host_id, memory_free, cpu_idle, cpu_kernel,\
+    disk_io, disk_available.
+  - The table has foreign key constraint named host_usage_info_fk which is host_id reference id in the host_info table.
 
 ## Test
 

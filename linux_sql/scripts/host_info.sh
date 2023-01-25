@@ -28,7 +28,7 @@ total_mem=$(echo "$vmstate_mb" | tail -1 | awk '{print $4}')
 timestamp=$(date +"%Y-%m-%d %T")
 
 
-#Insert server usage into host_usage table
+#Insert server usage into host_info table
 insert_stmt="INSERT INTO host_info(
                   hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz,
                   l2_cache, timestamp, total_mem
