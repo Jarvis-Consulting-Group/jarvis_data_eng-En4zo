@@ -25,7 +25,8 @@ script* to make the program automatically create docker instance, create table a
 
 ## Quick Start
 Using the psql_docker.sh file to create the PSQL instance(make sure docker installed).
-```
+```bash
+
 #script usage
 ./scripts/psql_docker.sh start|stop|create [db_username][db_password]
 
@@ -40,7 +41,8 @@ Using the psql_docker.sh file to create the PSQL instance(make sure docker insta
 
 ```
 Create a database using psql CLI
-```
+```bash
+
 #make sure the docker container is running
 docker ps -f name=jrvs-psql
 
@@ -61,7 +63,7 @@ postgres=# \q;
 
 ```
 Create tables to store hardware specification and resource usage data
-```
+```bash
 
 #create 'host_info' table and 'host_usage' table if not exist
 #execute ddl.sql script on the host_agent database to create the table
@@ -71,7 +73,8 @@ psal -h localhost -U postgres -d host_agent -f sql/ddl.sql
 
 Execute  host_info.sh to collect hardware specification data and then inserts the data into the psql
 instance.
-```
+```bash
+
 #script usage
 ./scripts/host_info.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]
 
@@ -82,7 +85,7 @@ instance.
 
 Execute  host_usage.sh to collect server usage data and then inserts the data into the psql
 instance.
-```
+```bash
 #script usage
 ./scripts/host_usage.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]
 
@@ -93,9 +96,10 @@ instance.
 
 Execute host_usage.sh every minute to generate real-time server source usage data and insert
 data into the database.
-```
+```bash
+
 #edit crontab jobs
-bach > crontab -e
+bash > crontab -e
 
 #execute host_usage.sh every minute(add this to crontab)
 * * * * * [absolute path of host_usage.sh] [psql_host] [psql_port] [db_name] [psql_user] [psql_password]
@@ -157,7 +161,7 @@ This section will describe each shell script.
 
 ## Test
 - Test psql_docker.sh
-  ```
+  ```bash
   #check if `jrvs-psql` container is running
   docker container ls -a -f name=jrvs-psql
   
