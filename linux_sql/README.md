@@ -16,11 +16,11 @@ In this project, we utilize *git* for code management and utilize a *git reposit
 constructed and tested on *Jarvis Remote Desktop (JRV)*. We create a *PSQL* instance using *docker* and connect to it through 
 the use of PSQL CLI tools. Additionally, we have written *bash scripts* and *DDL* SQL scripts to automate the process of 
 creating a docker instance, creating tables, and inserting data into the database.
-- **Git&Git Repository:** manage and store the code.
-- **Docker:** provision the PSQL instance.
-- **JRV:** a remote desktop running centos 7.
-- **Bash script&Linux Command:** implement the project.
-- **PostgreSQL:** store the server's hardware and real-time usage data.
+- **Git&Git Repository:** Manage and stored the code.
+- **Docker:** Provision the PSQL instance.
+- **JRV:** Remote desktop running centos 7.
+- **Bash Script&Linux Command:** Implement the project.
+- **PostgreSQL:** Store the server's hardware and real-time usage data.
 
 ## Quick Start
 Using the psql_docker.sh file to create the PSQL instance(make sure docker installed).
@@ -39,7 +39,7 @@ Using the psql_docker.sh file to create the PSQL instance(make sure docker insta
 ./scripts/psql_docker stop
 
 ```
-Create a database using psql CLI
+Create a database using psql CLI.
 ```bash
 
 #make sure the docker container is running
@@ -70,8 +70,7 @@ psal -h localhost -U postgres -d host_agent -f sql/ddl.sql
 
 ```
 
-Execute  host_info.sh to collect hardware specification data and then inserts the data into the psql
-instance.
+Execute host_info.sh to collect hardware specification and then inserts the data into the psql instance.
 ```bash
 
 #script usage
@@ -82,8 +81,7 @@ instance.
 
 ```
 
-Execute  host_usage.sh to collect server usage data and then inserts the data into the psql
-instance.
+Execute host_usage.sh to collect server usage data and then inserts the data into the psql instance.
 ```bash
 #script usage
 ./scripts/host_usage.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]
@@ -93,8 +91,7 @@ instance.
 
 ```
 
-Execute host_usage.sh every minute to generate real-time server source usage data and insert
-data into the database.
+Execute host_usage.sh every minute to generate real-time server source usage data and insert data into the database.
 ```bash
 
 #edit crontab jobs
@@ -112,8 +109,8 @@ bash > crontab -e
 1. Create a Linux server running with centos 7 and install the docker.
 2. Create a psql instance using docker.
 3. Install psql CLI client and Setup RDBMS psql database.
-4. Create 'host_info' table to store the hardware information and  'host_usage' table to store the real-time server usage data.
-5. Create agent for collecting hardware specification data and insert the data into database.
+4. Create 'host_info' table to stored the hardware information and 'host_usage' table to stored the real-time server usage data.
+5. Create agent for collecting hardware specification and insert the data into database.
 6. Create agent for collecting server usage data and then inserts the data into database.
 7. Using crontab to automate 'host_usage' agent to generate real-time server usage data.
 
@@ -128,7 +125,7 @@ This section will describe each shell script.
     The script first check the status of docker container, after that the shell script will switch case base to \
     create, start or stop the container base on the input command.
 - *host_info.sh:*
-  - The usage of host_info.sh is to collect hardware specification data and then inserts the data into psql instance.\
+  - The usage of host_info.sh is to collect hardware specification and then inserts the data into psql instance.\
     The script contains five input variables, psql_host, psql_port, db_name, psql_user, psql_password.\
     The script first check the numbers of the input arguments, then it collect the hardware information hostname,\
     cpu_number, cpu_architecture, cpu_model, cpu_mhz, l2_cache, timestamp, total_mem and insert the specification into\
@@ -148,13 +145,13 @@ This section will describe each shell script.
 ### Database Modeling
 - *host_info:*
   - The usage of this table is to store the hardware data of each linux host.\
-    The table store nine types of information which are id, hostname, cpu_number, cpu_architecture, cpu_model,\
+    The table stored nine types of information which are id, hostname, cpu_number, cpu_architecture, cpu_model,\
     cpu_mhz, l2_cache, timestamp and total_mem.
   - The table has primary key constraint named host_info_pk which is id.\
     The table has unique constraint named host_info_un which is hostname.
 - *host_usage:*
   - The usage of this table is to store the usage of hardware data of each linux host.\
-    The table store seven types of information which are timestamp, host_id, memory_free, cpu_idle, cpu_kernel,\
+    The table stored seven types of information which are timestamp, host_id, memory_free, cpu_idle, cpu_kernel,\
     disk_io, disk_available.
   - The table has foreign key constraint named host_usage_info_fk which is host_id reference id in the host_info table.
 
@@ -206,14 +203,15 @@ This section will describe each shell script.
   | 2023-01-24 04:17:01 | 1 | 3340 | 93 | 0 | 0 | 22450 |
 
 ## Deployment
+Please follow the steps and refer the quick start guide.
 1. Downloading code from Github.
 2. Installing docker.
-3. Create psql instance using psql_docker.sh
-4. Create tables using ddl.sql
-5. Insert hardware specification into the database using host_info.sh
+3. Create psql instance using psql_docker.sh.
+4. Create tables using ddl.sql.
+5. Insert hardware specification into the database using host_info.sh.
 6. Setup Crontab to execute host_usage.sh every minute to insert hardware usage data into the database every minute.
 
 ## Improvements
-1. Collecting the input and output of the internal net(based on switch).
-2. Create a GUI of monitoring app.
+1. Collecting the input and output of the internal network(based on switch).
+2. Create a GUI of the monitoring app.
 3. Collecting the data of usage of hardware against battery usage.
