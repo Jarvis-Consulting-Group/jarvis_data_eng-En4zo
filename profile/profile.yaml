@@ -24,6 +24,8 @@ skills:
     - Django
     - Networking
     - Springboot
+    - Algorithm
+    - Data Structure
   # At least 5 skills
   familiar:
     - HTML/CSS
@@ -31,9 +33,11 @@ skills:
     - Machine Learning/Deep Learning
     - Google Cloud Platform
     - Echarts
-    - Intellij IDEA
-    - MacOs
     - C
+    - Numpy
+    - Pandas
+    - Opencv
+    - Pytorch
 
 # List of Jarvis projects
 jarvis_projects:
@@ -41,7 +45,7 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+    description: Se luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellu
   - name: "Core Java Apps"
     git_url: "/core_java"
     description:
@@ -84,13 +88,22 @@ professional_experience:
   #Write your Jarvis role as a professional experience rather than training.
   - title: "Software Developer"
     company: "Jarvis"
-    duration: "2020-present"
+    duration: "Jan 2022-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
-  - title: "Tutor"
-    company: "XYZ Company"
-    duration: "2019"
-    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
+    description: "Implemented cluster monitor that allows user to monitor and store hardware specification and hardware
+    usage information by bash script.Stored the hardware data and hardware usage data into PostgreSQL
+    database provisioned using Docker. Fetched hardware usage periodically with Crontab."
+  - title: "Software Engineer"
+    company: "Poros Consulting"
+    duration: "July2022-Nov2022"
+    description: "Implemented by python(with Django as backend framework) to analyze stock data. Visualized companies
+    information and stock exchange history with Apache ECharts. Leveraged knowledge in full stack web development with HTML,
+    CSS and Javascript.Designed RESTful backend server enabling stock information to be stored persistently in an MySQL."
+  - title: "Software Engineer"
+    company: "Start Computer Equipment Corporation"
+    duration: "July2021-Sep2021"
+    description: "Designed user management pages for management system webapp of bank evaluation machine with using Java 
+    and Spring framework. Implemented functions that query machine based on time, area, or relevant data from MySQL database."
 
 #List of edcuation
 education: 
