@@ -4,34 +4,34 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git
+**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git/Github
 
-**Competent:** Donec, fermentum, Donec, fermentum, Donec
+**Competent:** Docker, Python, Django, Networking, Springboot
 
-**Familiar:** Donec, fermentum, fermentum, fermentum, fermentum
+**Familiar:** HTML/CSS, Javascript, Machine Learning/Deep Learning, Google Cloud Platform, Echarts, Intellij IDEA, MacOs, C
 
 ## Jarvis Projects
 
-Project source code: [https://github.com/jarviscanada/jarvis_data_eng_demo](https://github.com/jarviscanada/jarvis_data_eng_demo)
+Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/linux_sql)]: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**Cluster Monitor** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main/tree/master/linux_sql)]: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
 
-**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/core_java)]:
+**Core Java Apps** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main/tree/master/core_java)]:
       
   - Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
   - JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
   - Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
 
-**Springboot App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/springboot)]: Not Started
+**Springboot App** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main/tree/master/springboot)]: Not Started
 
-**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/python_data_anlytics)]: Not Started
+**Python Data Analytics** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main/tree/master/python_data_anlytics)]: Not Started
 
-**Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/hadoop)]: Not Started
+**Hadoop** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main/tree/master/hadoop)]: Not Started
 
-**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/spark)]: Not Started
+**Spark** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main/tree/master/spark)]: Not Started
 
-**Cloud/DevOps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/cloud_devops)]: Not Started
+**Cloud/DevOps** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main/tree/master/cloud_devops)]: Not Started
 
 
 ## Highlighted Projects
@@ -48,17 +48,12 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_demo](http
 
 
 ## Education
-**XYZ university (2012-2016)**, Bachelor of Applied Sciences, Electrical and Computer Engineering
-- Scholarship
-- Dean's List (2015, 2016): Ut enim ad minim veniam
-- GPA: 3.8/4.0
-
-**XYZ university (2016-2018)**, Master of Engineering, Electrical and Computer Engineering
+**Queen's University (2018-2022)**, Honours Bachelor of Computing, Computer Science, Queen's School of Computing
+- Dean's Honour List (2021-2022)
+- GPA: 3.59/4.0
 
 
 ## Miscellaneous
-- Udacity Machine Learning (2019)
-- Winner
-- Basketball player
-- Competitive gaming
-- Volunteer, ABC Food bank: Ut enim ad minim veniam
+- Snowboard player
+- Road Cycling
+- IELTS teaching assistance at high school
