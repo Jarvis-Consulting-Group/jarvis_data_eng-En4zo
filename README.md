@@ -1,6 +1,6 @@
 # Enzuo Mou . Jarvis Consulting
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac malesuada. Vivamus ligula elit, viverra eu ante porttitor, blandit convallis augue. Aliquam justo justo, mollis at lacus eu, rutrum finibus est. Vestibulum venenatis purus id accumsan pretium. In efficitur magna nec enim laoreet tincidunt. Ut libero metus, scelerisque nec eros vitae, sagittis pellentesque enim. Donec dictum felis volutpat, vehicula magna eu, imperdiet elit. Phasellus ut velit a massa efficitur faucibus. Sed volutpat, lacus sed sagittis luctus, elit.
+I am a recent graduate from Queen's University with a Bachelor's degree in Computer Science. I have a strong understanding of fundamental computer science concepts such as data structures, algorithms, and SQL, and am proficient in various operating systems including Windows, macOS, and Linux. I have gained practical experience through an internship at a computer equipment company, where I added a user management page to a bank evaluation machine's evaluation system and implemented a search and delete function based on time and location. I possess strong coding, self-learning, and problem-solving skills, as demonstrated by my ability to quickly learn and apply new technologies, such as the Django framework. I believe that the operation of modern society is closely tied to computer technology, making it essential to have a deep understanding of it. I find great satisfaction in finding and resolving bugs while programming. My education and experiences have prepared me well for a career as a junior software engineer, and I am excited to begin my full-time career in this field.
 
 ## Skills
 
@@ -15,7 +15,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac
 Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main/tree/master/linux_sql)]: Se luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellu
+**Cluster Monitor** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main/tree/master/linux_sql)]: Developed a Linux monitoring agent that enables users to easily monitor and store machine specifications and usage information for multiple Linux systems. The agent utilizes Bash scripts to gather hardware information from the machines, which is then securely stored in a PostgreSQL database that is provisioned using Docker. To ensure accurate and up-to-date information, resource usage is fetched at regular intervals using Crontab. The collected data can then be easily analyzed and manipulated using SQL queries, providing users with valuable insights and performance metrics for their Linux systems.
 
 **Core Java Apps** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main/tree/master/core_java)]:
       
@@ -35,9 +35,11 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 
 ## Highlighted Projects
-**Web app for resturant** [[GitHub](https://github.com/jarviscanada/jarvis_profile_builder)]: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**Distributed system and Inter-Thread Communication Mechanism(Java)**: Realized inter-thread communication mechanism using Java Sockets and RMI to allow different processes/thread to communicate over TCP/IP (Transmission Control Protocol/Internet Protocol) network. Compared different page replacement algorithms in centralized system that uses virtual memory. Used distributed system and implemented each page replacement algorithm on particular computer server.
 
-**Machine Learning**: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**GNU Jami Architectures Analysis**: Analyzed and studied architecture, data flow of GNU Jami, and interaction subsystems of GUN Jami.Provided GNU Jami with features, replacing central server with blockchain to store user accounts.
+
+**YOLOv3 Object Detection**: Implemented object detection model with YOLOv3 and VOC2007+2012 dataset. Realized real-time detection of 20 types of objects in video (including people, cars, boats, cats, dogs, etc.) Evaluated using mAP value, obtaining mAP of 84.22%.
 
 
 ## Professional Experiences
@@ -52,7 +54,7 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 ## Education
 **Queen's University (2018-2022)**, Honours Bachelor of Computing, Computer Science, Queen's School of Computing
 - Dean's Honour List (2021-2022)
-- GPA: 3.59/4.0
+- GPA: 3.59/4.3
 
 
 ## Miscellaneous
