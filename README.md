@@ -39,7 +39,7 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 **GNU Jami Architectures Analysis**: Analyzed and studied architecture, data flow of GNU Jami, and interaction subsystems of GUN Jami.Provided GNU Jami with features, replacing central server with blockchain to store user accounts.
 
-**YOLOv3 Object Detection**: Implemented object detection model with YOLOv3 and VOC2007+2012 dataset. Realized real-time detection of 20 types of objects in video (including people, cars, boats, cats, dogs, etc.) Evaluated using mAP value, obtaining mAP of 84.22%.
+**YOLOv3 Object Detection(Python)**: Implemented object detection model with YOLOv3 and VOC2007+2012 dataset. Realized real-time detection of 20 types of objects in video (including people, cars, boats, cats, dogs, etc.) Evaluated using mAP value, obtaining mAP of 84.22%.
 
 
 ## Professional Experiences
