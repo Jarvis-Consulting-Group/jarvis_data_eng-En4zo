@@ -15,8 +15,12 @@ on the established environment.
 + Docker: Provision the PSQL instance.
 + JRV: Remote desktop running centos 7.
 + PostgreSQL: Practice create, read, update and delete command.
-# SQL Queries
 
+# Table Architecture
+###### This is the architecture of tables.
+![This is the architecture](./assets/table_architecture.png)
+
+# SQL Queries
 ###### Table Setup (DDL)
 
 ```sql
@@ -60,9 +64,6 @@ create table if not exists cd.bookings
      constraint booking_facid_fk foreign key (facid) references cd.facilities(facid)
 )
 ```
-###### Table Architecture
-This is the architecture of tables.
-![This is the architecture](./assets/table_architecture.png)
 
 ###### Question 1: The club is adding a new facility - a spa. We need to add it into the facilities table. Use the following values:\facid: 9, Name: 'Spa', membercost: 20, guestcost: 30, initialoutlay: 100000, monthlymaintenance: 800.
 
