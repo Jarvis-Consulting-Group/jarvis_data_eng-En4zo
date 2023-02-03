@@ -1,12 +1,12 @@
 # Introduction
-###### What does this project do?
+#### What does this project do?
 In this project, we learn *SQL* and *RDBMS* by solving several SQL 
 queries.
-###### Who are the users?
+#### Who are the users?
 Anyone who needs to interact with and manage data stored in 
 relational databases, can use SQL to perform various operations 
 such as inserting, updating, retrieving, and deleting data.
-###### Technologies used?
+#### Technologies used?
 In this project, a PostgreSQL database instance is created using 
 Docker under the Jarvis remote desktop. Three tables are set up 
 using DDL queries, and various SQL queries are practiced based 
