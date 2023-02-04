@@ -151,7 +151,7 @@ FROM
     CD.BOOKINGS;
 ```
 
-###### Question 6: remove member 37, who has never made a booking, from our database.
+###### Question 6: Remove member 37, who has never made a booking, from our database.
 ```sql
 DELETE
 FROM
