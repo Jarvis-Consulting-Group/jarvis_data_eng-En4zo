@@ -20,6 +20,13 @@ on the established environment.
 ###### This is the architecture of tables.
 ![This is the architecture](./assets/table_architecture.png)
 
+# Load sample data into your database.
+Use [clubdata.sql](./clubdata.sql) script to load sample data into your database.
+```shell
+psql -U <username> -f clubdata.sql -d [yourdatabase] -x -q
+
+```
+
 # SQL Queries
 ###### Table Setup (DDL)
 
