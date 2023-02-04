@@ -18,10 +18,10 @@ on the established environment.
 
 # Table Architecture
 ###### This is the architecture of tables.
-![This is the architecture](./assets/table_architecture.png)
+ ![This is the architecture](./assets/table_architecture.png)
 
 # Load sample data into your database.
-Use [clubdata.sql](./clubdata.sql) script to load sample data into your database.
+###### Use [clubdata.sql](./clubdata.sql) script to load sample data into your database.
 ```shell
 psql -U <username> -f clubdata.sql -d [yourdatabase] -x -q
 
@@ -71,6 +71,9 @@ create table if not exists cd.bookings
      constraint booking_facid_fk foreign key (facid) references cd.facilities(facid)
 )
 ```
+
+# Sample Answers.
+##### Sample answers are store in the [queries.sql](./queries.sql) file.
 
 ###### Question 1: The club is adding a new facility - a spa. We need to add it into the facilities table. Use the following values:\facid: 9, Name: 'Spa', membercost: 20, guestcost: 30, initialoutlay: 100000, monthlymaintenance: 800.
 
