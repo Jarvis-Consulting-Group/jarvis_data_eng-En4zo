@@ -43,6 +43,6 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 
 ## Miscellaneous
-- Snowboarding: Enjoy snowboarding on the slopes and gain experience in maintaining various snowboard gear. Aim to become a CASI Level 2 instructor.
-- Road Cycling: I enjoy riding with a team at a pace of 27-30 km/h, covering distances of 50-110 km. I am also fond of riding sports gear.
+- Enjoy snowboarding on the slopes and gain experience in maintaining various snowboard gear. Aim to become a CASI Level 2 instructor.
+- I enjoy road cycling and riding with a team at a pace of 27-30 km/h, covering distances of 50-110 km. I am also fond of riding sports gear.
 - Worked as an IELTS teaching assistant in high school, assisting students with dictation and creating IELTS learning plans.
