@@ -2,8 +2,7 @@
   "education": [
     {
       "awards_achievements": [
-        "Dean's Honour List (2021-2022)",
-        "GPA: 3.59/4.3"
+        "Dean's Honour List (2021-2022)"
       ],
       "degree": "Honours Bachelor of Computing, Computer Science",
       "department": "Queen's School of Computing",
@@ -11,15 +10,15 @@
       "school_name": "Queen's University"
     }
   ],
-  "github_repo_root_url": "https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo/tree/main",
+  "github_repo_root_url": "https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo",
   "highlighted_projects": [
     {
-      "description": "Realized inter-thread communication mechanism using Java Sockets and RMI to allow different processes/thread to communicate over TCP/IP (Transmission Control Protocol/Internet Protocol) network. Compared different page replacement algorithms in centralized system that uses virtual memory. Used distributed system and implemented each page replacement algorithm on particular computer server.",
+      "description": "Realized inter-thread communication mechanism using Java Sockets and RMI to allow different processes/thread to communicate over TCP/IP network. Compared different page replacement algorithms in a centralized system that uses virtual memory. Used a distributed system and implemented each page replacement algorithm on particular computer server.",
       "git_url": null,
-      "name": "Distributed system and Inter-Thread Communication Mechanism(Java)"
+      "name": "Distributed System and Inter-Thread Communication Mechanism(Java)"
     },
     {
-      "description": "Analyzed and studied architecture, data flow of GNU Jami, and interaction subsystems of GUN Jami.Provided GNU Jami with features, replacing central server with blockchain to store user accounts.",
+      "description": "Analyzed and studied architecture, data flow of GNU Jami, and interaction subsystems of GUN Jami. Provided GNU Jami with features, replacing the central server with blockchain to store user accounts.",
       "git_url": null,
       "name": "GNU Jami Architectures Analysis"
     },
@@ -36,38 +35,9 @@
       "name": "Cluster Monitor"
     },
     {
-      "description": [
-        "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
-        "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
-        "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-      ],
-      "git_url": "/core_java",
-      "name": "Core Java Apps"
-    },
-    {
-      "description": "",
-      "git_url": "/springboot",
-      "name": "Springboot App"
-    },
-    {
-      "description": "",
-      "git_url": "/python_data_anlytics",
-      "name": "Python Data Analytics"
-    },
-    {
-      "description": "",
-      "git_url": "/hadoop",
-      "name": "Hadoop"
-    },
-    {
-      "description": "",
-      "git_url": "/spark",
-      "name": "Spark"
-    },
-    {
-      "description": "",
-      "git_url": "/cloud_devops",
-      "name": "Cloud/DevOps"
+      "description": "To deepen our understanding of relational databases, relational database management systems, structured query language, optimizations, and data models, we familiarized ourselves with these concepts through hands-on work. Using DBeaver as an IDE, we practiced manipulating existing data and compared our query results with expected outcomes. The existing data was stored in a file, clubdata.sql, which was imported into a PostgreSQL database deployed in a Docker container. This hands-on approach allowed us to gain a practical understanding of the concepts and strengthen our skills in the field.",
+      "git_url": "/sql",
+      "name": "Manipulate an Existing Database"
     }
   ],
   "name": "Enzuo Mou",
@@ -103,17 +73,13 @@
   ],
   "skills": {
     "competent": [
+      "Javascript",
       "Docker",
-      "Python",
-      "Django",
+      "HTML/CSS",
       "Networking",
-      "Springboot",
-      "Algorithm",
-      "Data Structure"
+      "Springboot"
     ],
     "familiar": [
-      "HTML/CSS",
-      "Javascript",
       "Machine Learning/Deep Learning",
       "Google Cloud Platform",
       "Echarts",
@@ -125,11 +91,13 @@
     ],
     "proficient": [
       "Java",
-      "Linux/Bash",
+      "Python",
+      "Linux/Bash/Shell",
+      "Django",
       "RDBMS/SQL",
       "Agile/Scrum",
       "Git/Github"
     ]
   },
-  "summary": "I am a recent graduate from Queen's University with a Bachelor's degree in Computer Science. I have a strong understanding of fundamental computer science concepts such as data structures, algorithms, and SQL, and am proficient in various operating systems including Windows, macOS, and Linux. I have gained practical experience through an internship at a computer equipment company, where I added a user management page to a bank evaluation machine's evaluation system and implemented a search and delete function based on time and location. I possess strong coding, self-learning, and problem-solving skills, as demonstrated by my ability to quickly learn and apply new technologies, such as the Django framework. I believe that the operation of modern society is closely tied to computer technology, making it essential to have a deep understanding of it. I find great satisfaction in finding and resolving bugs while programming. My education and experiences have prepared me well for a career as a junior software engineer, and I am excited to begin my full-time career in this field."
+  "summary": "I am a recent graduate from Queen's University with a Bachelor's degree in Computer Science. I possess a solid foundation in fundamental concepts such as data structures, algorithms, and RDBM. My practical experience includes an internship at a computer equipment company where I developed a user management page and a search and delete function for a bank evaluation machine's evaluation system. Additionally, I have experience building a webapp for stock data analysis, demonstrating my ability to apply my technical skills to real-world projects. I possess strong coding,self-learning, and problem-solving skills, as demonstrated by my ability to quickly learn and apply new technologies. I believe that the operation of modern society is closely tied to computer technology, making it essential to have a deep understanding of it. I find great satisfaction in finding and resolving bugs while programming. My education and experiences have prepared me well for a career as a junior software engineer, and I am excited to begin my full-time career in this field."
 }
