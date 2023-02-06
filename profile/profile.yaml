@@ -110,7 +110,7 @@ professional_experience:
   - title: "Software Engineer"
     company: "Poros Consulting"
     duration: "July2022-Nov2022"
-    description: "As a trainee software engineer at Poros Consulting, I was assigned to implement a stock data analysis system. 
+    description: "Assigned to implement a stock data analysis system. 
     Adhering to the Agile methodology, I regularly updated my supervisor on my progress. I developed the web application using Django as 
     the back-end framework and Apache ECharts for data visualization and stock trading history. My full-stack web development skills in HTML, 
     CSS, and Javascript were utilized to design a RESTful back-end server for storing stock information persistently in MySQL. Throughout the 

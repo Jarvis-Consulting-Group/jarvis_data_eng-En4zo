@@ -60,7 +60,7 @@
     },
     {
       "company": "Poros Consulting",
-      "description": "As a trainee software engineer at Poros Consulting, I was assigned to implement a stock data analysis system. Adhering to the Agile methodology, I regularly updated my supervisor on my progress. I developed the web application using Django as the back-end framework and Apache ECharts for data visualization and stock trading history. My full-stack web development skills in HTML, CSS, and Javascript were utilized to design a RESTful back-end server for storing stock information persistently in MySQL. Throughout the project, I also created technical documents and prepared presentations to showcase my work to my supervisor. After completion, I presented the implemented components and demonstrated the functionality of the web application.",
+      "description": "Assigned to implement a stock data analysis system. Adhering to the Agile methodology, I regularly updated my supervisor on my progress. I developed the web application using Django as the back-end framework and Apache ECharts for data visualization and stock trading history. My full-stack web development skills in HTML, CSS, and Javascript were utilized to design a RESTful back-end server for storing stock information persistently in MySQL. Throughout the project, I also created technical documents and prepared presentations to showcase my work to my supervisor. After completion, I presented the implemented components and demonstrated the functionality of the web application.",
       "duration": "July2022-Nov2022",
       "title": "Software Engineer"
     },
