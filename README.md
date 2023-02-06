@@ -30,11 +30,11 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (Jan 2022-present)**: Implemented cluster monitor that allows user to monitor and store hardware specification and hardware usage information by bash script.Stored the hardware data and hardware usage data into PostgreSQL database provisioned using Docker. Fetched hardware usage periodically with Crontab.
+**Junior Software Developer, Jarvis (Jan 2022-present)**: Joined Jarvis as a junior software developer to develop, consult, and assist customers with their software solutions. I work in an Agile/Scrum development environment, where I participate in daily scrum meetings with the scrum master to discuss project progress. Our sprint cycle is two weeks, with a sprint meeting held every two weeks. At Jarvis, I have gained exposure to various technologies commonly used in professional technical environments, such as Java, RDMS, Linux, Docker, Spring Boot, etc.
 
-**Software Engineer, Poros Consulting (July2022-Nov2022)**: Implemented by python(with Django as backend framework) to analyze stock data. Visualized companies information and stock exchange history with Apache ECharts. Leveraged knowledge in full stack web development with HTML, CSS and Javascript.Designed RESTful backend server enabling stock information to be stored persistently in an MySQL.
+**Software Engineer, Poros Consulting (July2022-Nov2022)**: As a trainee software engineer at Poros Consulting, I was assigned to implement a stock data analysis system. Adhering to the Agile methodology, I regularly updated my supervisor on my progress. I developed the web application using Django as the back-end framework and Apache ECharts for data visualization and stock trading history. My full-stack web development skills in HTML, CSS, and Javascript were utilized to design a RESTful back-end server for storing stock information persistently in MySQL. Throughout the project, I also created technical documents and prepared presentations to showcase my work to my supervisor. After completion, I presented the implemented components and demonstrated the functionality of the web application.
 
-**Software Engineer, Start Computer Equipment Corporation (July2021-Sep2021)**: Designed user management pages for management system webapp of bank evaluation machine with using Java and Spring framework. Implemented functions that query machine based on time, area, or relevant data from MySQL database.
+**Software Engineer, Start Computer Equipment Corporation (July2021-Sep2021)**: Tasked with comprehending the framework of the bank evaluation machine's management system and designing the user management page. The management system was implemented using Java and Spring Boot. I successfully completed the user management page, including adding the ability to query machines based on time, region, and relevant data stored in a MySQL database. Daily progress was reported to my instructor, and I also participated in weekly technology-sharing meetings with the team where the team leader would share interesting new projects and emerging technologies on Github with everyone.
 
 
 ## Education
@@ -43,6 +43,6 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 
 ## Miscellaneous
-- Snowboarding
-- Road Cycling
-- IELTS teaching assistance at high school
+- Snowboarding: Enjoy snowboarding on the slopes and gain experience in maintaining various snowboard gear. Aim to become a CASI Level 2 instructor.
+- Road Cycling: I enjoy riding with a team at a pace of 27-30 km/h, covering distances of 50-110 km. I am also fond of riding sports gear.
+- Worked as an IELTS teaching assistant in high school, assisting students with dictation and creating IELTS learning plans.
