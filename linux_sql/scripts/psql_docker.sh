@@ -14,16 +14,16 @@ container_status=$?
 #switch case to create, start or stop
 case $cmd in
   create)
-  #check if container already exist
-  if [ $container_status -eq 0 ]; then
-    echo 'Container already exists'
-    exit 1;
-  fi
-  #check number of CLI commands
-  if [ $# -ne 3 ]; then
-    echo 'Create requires username and password'
-    exit1
-  fi
+    #check if container already exist
+    if [ $container_status -eq 0 ]; then
+      echo 'Container already exists'
+      exit 1;
+    fi
+    #check number of CLI arguments
+    if [ $# -ne 3 ]; then
+      echo 'Create requires username and password: create [username] [password]'
+      exit1
+    fi
   #create container
   #get latest postgres image
   docker pull postgres
