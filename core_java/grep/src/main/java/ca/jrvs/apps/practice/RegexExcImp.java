@@ -20,16 +20,16 @@ public class RegexExcImp implements RegexExc{
         return pattern.matcher(line).matches();
     }
 
-    public static void main(String[] args) {
-        RegexExcImp matching = new RegexExcImp();
-        System.out.println(matching.matchJpeg("image.jpg"));
-        System.out.println(matching.matchJpeg("image.jpeg"));
-        System.out.println(matching.matchIp("192.168.1.1"));
-        System.out.println(matching.matchIp("256.256.256.256"));
-        System.out.println(matching.matchIp("1000.0.1.1"));
-        System.out.println(matching.isEmptyLine("sdfdf"));
-        System.out.println(matching.isEmptyLine("   "));
-    }
+//    public static void main(String[] args) {
+//        RegexExcImp matching = new RegexExcImp();
+//        System.out.println(matching.matchJpeg("image.jpg"));
+//        System.out.println(matching.matchJpeg("image.jpeg"));
+//        System.out.println(matching.matchIp("192.168.1.1"));
+//        System.out.println(matching.matchIp("256.256.256.256"));
+//        System.out.println(matching.matchIp("1000.0.1.1"));
+//        System.out.println(matching.isEmptyLine("sdfdf"));
+//        System.out.println(matching.isEmptyLine("   "));
+//    }
 }
 
 
