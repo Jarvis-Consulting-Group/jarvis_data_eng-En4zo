@@ -1,4 +1,4 @@
-#Linux Cluster Monitoring Agent
+# Linux Cluster Monitoring Agent
 ## Introduction
 #### What does this project do?
 In this project, we are creating several shell scripts to gather and record the hardware information of the server, 
@@ -16,11 +16,11 @@ In this project, we utilize *git* for code management and utilize a *git reposit
 constructed and tested on *Jarvis Remote Desktop (JRV)*. We create a *PSQL* instance using *docker* and connect to it through 
 the use of PSQL CLI tools. Additionally, we have written *bash scripts* and *DDL* SQL scripts to automate the process of 
 creating a docker instance, creating tables, and inserting data into the database.
-- **Git&Git Repository:** Manage and stored the code.
+- **PostgreSQL:** Store the server's hardware and real-time usage data.
 - **Docker:** Provision the PSQL instance.
 - **JRV:** Remote desktop running centos 7.
 - **Bash Script&Linux Command:** Implement the project.
-- **PostgreSQL:** Store the server's hardware and real-time usage data.
+- **Git&Git Repository:** Manage and stored the code.
 
 ## Quick Start
 Using the psql_docker.sh file to create the PSQL instance(make sure docker installed).

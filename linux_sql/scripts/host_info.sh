@@ -8,12 +8,12 @@ psql_password=$5
 
 #check # of args
 if [ "$#" -ne 5 ]; then
-    echo "Illegal number of parameters"
+    echo "Illegal number of parameters: [psql host] [psql port] [database name] [user name] [user password]"
     exit 1
 fi
 
 #save machine statistics in MB and current machine hostname to variables
-vmstate_mb=$(vmstat --unit M)
+vmstat_mb=$(vmstat --unit M)
 lscpu_out=`lscpu`
 hostname=$(hostname -f)
 
@@ -24,7 +24,7 @@ cpu_architecture=$(echo "$lscpu_out"  | egrep "^Architecture:" | awk '{print $2}
 cpu_model=$(echo "$lscpu_out"  | egrep "^Model:" | awk '{print $2}' | xargs)
 cpu_mhz=$(echo "$lscpu_out" | egrep "^CPU MHz:" | awk '{print $3}' | xargs)
 l2_cache=$(echo "$lscpu_out" | egrep "^L2 cache:" | awk '{print $3}' | xargs)
-total_mem=$(echo "$vmstate_mb" | tail -1 | awk '{print $4}')
+total_mem=$(echo "$vmstat_mb" | tail -1 | awk '{print $4}')
 timestamp=$(date +"%Y-%m-%d %T")
 
 
