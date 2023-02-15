@@ -2,7 +2,7 @@
 
 ## Introduction
 #### What does this project do?
-This project is an implementation of the popular Linux command `grep` in Java. 
+This project is an implementation of the popular Linux command `grep` in Java 8. 
 It allows users to search for specific strings in files or within a directory, 
 making it easier and more efficient to find the desired information.
 #### Who are the users?
