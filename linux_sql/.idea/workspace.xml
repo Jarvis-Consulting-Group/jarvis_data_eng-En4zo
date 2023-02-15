@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="355c34ff-b6dc-41bb-8c89-6a1ee44afaf0" name="Changes" comment="" />
+    <list default="true" id="355c34ff-b6dc-41bb-8c89-6a1ee44afaf0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../core_java/grep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../core_java/grep/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/host_info.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/host_info.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/host_usage.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/host_usage.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/psql_docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/psql_docker.sh" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +32,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/centos/dev/jarvis_data_eng_Enzuo/profile",
+    "last_opened_file_path": "/home/centos/dev/jarvis_data_eng_Enzuo/linux_sql",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,6 +51,7 @@
       <updated>1674143741666</updated>
       <workItem from="1674143746685" duration="61783000" />
       <workItem from="1674764301184" duration="92000" />
+      <workItem from="1676305197088" duration="1379000" />
     </task>
     <servers />
   </component>
