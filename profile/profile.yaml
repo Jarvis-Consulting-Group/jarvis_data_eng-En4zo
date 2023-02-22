@@ -6,10 +6,10 @@ github_repo_root_url: https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
 summary: I am a recent graduate from Queen's University with a Bachelor's degree in Computer Science. I possess a solid foundation in
-  fundamental concepts such as data structures, algorithms, and RDBM. My practical experience includes an internship at a
+  fundamental concepts such as data structures, algorithms, and RDBMS. My practical experience includes an internship at a
   computer equipment company where I developed a user management page and a search and delete function for a bank evaluation
   machine's evaluation system. Additionally, I have experience building a webapp for stock data analysis, demonstrating my
-  ability to apply my technical skills to real-world projects. I possess strong coding,self-learning, and
+  ability to apply my technical skills to real-world projects. I possess strong coding, self-learning, and
   problem-solving skills, as demonstrated by my ability to quickly learn and apply new technologies. I believe that the 
   operation of modern society is closely tied to computer technology, making it essential to
   have a deep understanding of it. I find great satisfaction in finding and resolving bugs while programming. My education and
@@ -105,8 +105,8 @@ professional_experience:
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: "Joined Jarvis as a junior software developer to develop, consult, and assist customers with their software solutions. 
     I work in an Agile/Scrum development environment, where I participate in daily scrum meetings with the scrum master to discuss project 
-    progress. Our sprint cycle is two weeks, with a sprint meeting held every two weeks. At Jarvis, I have gained exposure to various 
-    technologies commonly used in professional technical environments, such as Java, RDMS, Linux, Docker, Spring Boot, etc."
+    progress. And our sprint meeting held every two weeks. At Jarvis, I have gained exposure to various 
+    technologies commonly used in professional technical environments, such as Java, RDBMS, Linux, Docker, Spring Boot, etc."
   - title: "Software Engineer"
     company: "Poros Consulting"
     duration: "July2022-Nov2022"

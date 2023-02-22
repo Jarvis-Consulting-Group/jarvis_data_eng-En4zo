@@ -8,18 +8,18 @@ psql_password=$5
 
 #check # of args
 if [ "$#" -ne 5 ]; then
-    echo "Illegal number of parameters"
+    echo "Illegal number of parameters: [psql host] [psql port] [database name] [user name] [user password]"
     exit 1
 fi
 
 #save machine statistics in MB and current machine hostname to variables
-vmstate_mb=$(vmstat --unit M)
+vmstat_mb=$(vmstat --unit M)
 hostname=$(hostname -f)
 #run top once to get current cpu usage
 cpu_info=$(top -bn1)
 
 #Retrieve hardware usage specification variables
-memory_free=$(echo "$vmstate_mb" | awk '{print $4}' | tail -n1 | xargs)
+memory_free=$(echo "$vmstat_mb" | awk '{print $4}' | tail -n1 | xargs)
 cpu_idle=$(echo "$cpu_info" | grep "Cpu(s)" | awk '{print $8}')
 cpu_kernel=$(echo "$cpu_info" | grep "Cpu(s)" | awk '{print $4}')
 disk_io=$(vmstat --unit M -d | tail -1 | awk -v col="10" '{print $col}')
