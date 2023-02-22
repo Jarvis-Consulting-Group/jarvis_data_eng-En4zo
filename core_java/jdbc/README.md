@@ -1,7 +1,7 @@
 # Introduction
 
 This project is a Java application that demonstrates how to use the JDBC API to interact with a PostgreSQL 
-database. Using Java version 1.8, we implement the standard CRUD operations (Create, Read, Update, Delete) 
+database. Using Java version 8, we implement the standard CRUD operations (Create, Read, Update, Delete) 
 on the database. To simplify deployment, we use Docker to create a container image and run PostgreSQL within it. 
 The application uses the java.sql packages to establish connections with the database and execute SQL statements 
 to perform CRUD operations. We use Maven to manage dependencies, such as the org.postgresql driver, and Git and 
