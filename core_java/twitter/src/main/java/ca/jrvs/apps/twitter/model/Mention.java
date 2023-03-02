@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "tag"
 })
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Hashtag {
-    @JsonProperty("tart")
+public class Mention {
+    @JsonProperty("start")
     private int start;
     @JsonProperty("end")
     private int end;
     @JsonProperty("tag")
     private String tag;
+
 }

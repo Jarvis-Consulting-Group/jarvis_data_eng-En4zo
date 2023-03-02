@@ -5,28 +5,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "coordinates",
-        "type"
+        "full_name",
+        "id"
 })
 public class Coordinates {
-    @JsonProperty("coordinates")
-    private float coordinates;
-    @JsonProperty("type")
-    private String type;
+    @JsonProperty("fullName")
+    private String fullName;
+    @JsonProperty("id")
+    private String id;
 
-    public float getCoordinates() {
-        return coordinates;
-    }
 
-    public void setCoordinates(float coordinates) {
-        this.coordinates = coordinates;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
 }

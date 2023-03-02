@@ -25,6 +25,7 @@ public class JsonParser {
     }
 
     public static void main(String[] args) throws IOException{
+        System.out.println(companyStr);
         Company company = toObjectFromJson(companyStr, Company.class);
         System.out.println(toJson(company,true,false));
     }

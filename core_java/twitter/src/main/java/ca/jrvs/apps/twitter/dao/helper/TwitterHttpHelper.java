@@ -1,5 +1,6 @@
 package ca.jrvs.apps.twitter.dao.helper;
 
+import com.google.gdata.util.common.base.PercentEscaper;
 import oauth.signpost.OAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import oauth.signpost.exception.OAuthException;
@@ -15,10 +16,13 @@ import org.springframework.http.HttpMethod;
 import javax.validation.groups.Default;
 import java.io.IOException;
 import java.net.URI;
+import ca.jrvs.apps.twitter.example.JsonParser;
 
 public class TwitterHttpHelper implements HttpHelper{
     private OAuthConsumer consumer;
     private HttpClient httpClient;
+    private static final URI postUri = URI.create("https://api.twitter.com/2/tweets");
+    private static final URI getUri = URI.create("https://api.twitter.com/2/tweets");
 
     public TwitterHttpHelper(String consumerKey, String consumerSecret, String accessToken, String tokenSecret){
         consumer = new CommonsHttpOAuthConsumer(consumerKey,consumerSecret);
@@ -29,9 +33,9 @@ public class TwitterHttpHelper implements HttpHelper{
     }
 
     @Override
-    public HttpResponse httpPost(URI uri) {
+    public HttpResponse httpPost(URI uri, String s) {
         try{
-            return executeHttpRequest(HttpMethod.POST,uri, null);
+            return executeHttpRequest(HttpMethod.POST,uri, s);
         }catch (OAuthException | IOException e){
             throw new RuntimeException("Failed to execute", e);
         }
@@ -47,15 +51,17 @@ public class TwitterHttpHelper implements HttpHelper{
         }
     }
 
-    public HttpResponse executeHttpRequest(HttpMethod method, URI uri, StringEntity stringEntity) throws OAuthException, IOException{
+    public HttpResponse executeHttpRequest(HttpMethod method, URI uri, String s) throws OAuthException, IOException{
         if(method == HttpMethod.GET){
             HttpGet request = new HttpGet(uri);
             consumer.sign(request);
             return httpClient.execute(request);
         } else if (method == HttpMethod.POST) {
             HttpPost request = new HttpPost(uri);
-            if (stringEntity != null){
-                request.setEntity(stringEntity);
+            if (s != null){
+                request.setHeader("Content-Type","application/json");
+                String requestBody = "{\"text\": \"" + s + "\"}";
+                request.setEntity(new StringEntity(requestBody));
             }
             consumer.sign(request);
             return httpClient.execute(request);
@@ -75,7 +81,9 @@ public class TwitterHttpHelper implements HttpHelper{
         System.out.println(CONSUMER_KEY + "|" + CONSUMER_SECRET + "|" + ACCESS_TOKEN + "|" + TOKEN_SECRET);
 
         HttpHelper httpHelper = new TwitterHttpHelper(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN,TOKEN_SECRET);
-        HttpResponse response = httpHelper.httpPost(new URI("https://api.twitter.com/1.1/statuses/update.json?status=first_tweet2"));
+        String text = "Hello World2233";
+//        HttpResponse response = httpHelper.httpPost(TwitterHttpHelper.uri, text);
+        HttpResponse response = httpHelper.httpGet(URI.create("https://api.twitter.com/2/tweets?ids=1212092628029698048&tweet.fields=attachments,author_id,context_annotations,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,source,text"));
         System.out.println(EntityUtils.toString(response.getEntity()));
     }
 }

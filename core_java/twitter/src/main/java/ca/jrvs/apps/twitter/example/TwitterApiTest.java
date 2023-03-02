@@ -5,7 +5,9 @@ import oauth.signpost.OAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
@@ -18,24 +20,32 @@ public class TwitterApiTest {
     private static String  TOKEN_SECRET = System.getenv("tokenSecret");
 
     public static void main(String[] args) throws Exception{
-        //setup oauth
-        OAuthConsumer consumer = new CommonsHttpOAuthConsumer(CONSUMER_KEY, CONSUMER_SECRET);
-        consumer.setTokenWithSecret(ACCESS_TOKEN,TOKEN_SECRET);
+        // Setup authentication
+        OAuthConsumer oAuthConsumer = new CommonsHttpOAuthConsumer(CONSUMER_KEY, CONSUMER_SECRET);
+        oAuthConsumer.setTokenWithSecret(ACCESS_TOKEN, TOKEN_SECRET);
 
-        //create an HTTP GET request
-        String status = "today is a good day";
-        PercentEscaper percentEscaper = new PercentEscaper("",false);
-        HttpPost request = new HttpPost("https://api.twitter.com/1.1/statuses/update.json?status="
-                + percentEscaper.escape(status));
-        //sign the request(add headers)
-        consumer.sign(request);
-        System.out.println("Http Request Headers");
-        Arrays.stream(request.getAllHeaders()).forEach(System.out::println);
+        // Create a HTTP GET request
+        String Id = "1212092628029698048";
+        String text = "today is a good day";
+        PercentEscaper percentEscaper = new PercentEscaper("", false);
+        HttpPost httpGetRequest = new HttpPost(
+                "https://api.twitter.com/2/tweets");
+        String tweetText = "Hello, world! This is my first tweet using the Twitter v2 API. #twitterapi #java";
+        String requestBody = "{\"text\": \"" + tweetText + "\"}";
+        httpGetRequest.setHeader("Content-Type","application/json");
+        httpGetRequest.setEntity(new StringEntity(requestBody));
+        System.out.println(httpGetRequest.getEntity());
 
-        //sent the request
+        // sign/add headers to request
+        oAuthConsumer.sign(httpGetRequest);
+
+        System.out.println("Http Request Headers:");
+        Arrays.stream(httpGetRequest.getAllHeaders()).forEach(System.out::println);
+
+        // Send http GET request
         HttpClient httpClient = HttpClientBuilder.create().build();
-        HttpResponse response = httpClient.execute(request);
-        System.out.println(EntityUtils.toString(response.getEntity()));
+        HttpResponse httpResponse = httpClient.execute(httpGetRequest);
+        System.out.println(EntityUtils.toString(httpResponse.getEntity()));
 
     }
 }
