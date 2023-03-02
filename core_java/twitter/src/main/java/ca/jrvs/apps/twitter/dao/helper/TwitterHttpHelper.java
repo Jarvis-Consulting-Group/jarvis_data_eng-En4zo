@@ -1,5 +1,6 @@
 package ca.jrvs.apps.twitter.dao.helper;
 
+import ca.jrvs.apps.twitter.JsonUtil;
 import com.google.gdata.util.common.base.PercentEscaper;
 import oauth.signpost.OAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
@@ -13,7 +14,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.springframework.http.HttpMethod;
-
+import ca.jrvs.apps.twitter.model.*;
 import javax.validation.groups.Default;
 import java.io.IOException;
 import java.net.URI;
@@ -95,9 +96,14 @@ public class TwitterHttpHelper implements HttpHelper{
         HttpHelper httpHelper = new TwitterHttpHelper(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN,TOKEN_SECRET);
         String text = "Hello World2233";
 //        HttpResponse response = httpHelper.httpPost(TwitterHttpHelper.uri, text);
-//        HttpResponse response = httpHelper.httpGet(URI.create("https://api.twitter.com/2/tweets?ids=1212092628029698048&tweet.fields=attachments,author_id,context_annotations,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,source,text"));
-        HttpResponse response = httpHelper.httpDelete(URI.create("https://api.twitter.com/2/tweets/1631040737457446914"));
-        System.out.println(EntityUtils.toString(response.getEntity()));
+        HttpResponse response = httpHelper.httpGet(URI.create("https://api.twitter.com/2/tweets?ids=1631058476355993605&tweet.fields=id,created_at,text,entities,public_metrics&expansions=geo.place_id&place.fields=geo"));
+//        HttpResponse response = httpHelper.httpDelete(URI.create("https://api.twitter.com/2/tweets/1631026412621627392"));
+        String jsonStr;
+        jsonStr = EntityUtils.toString(response.getEntity());
+        Tweet tweet = JsonUtil.toObjectFromJson(jsonStr, Tweet.class);
+        System.out.println(JsonUtil.toJson(tweet,true,false));
+
+        System.out.println(response.getStatusLine().getStatusCode());
 
     }
 }
