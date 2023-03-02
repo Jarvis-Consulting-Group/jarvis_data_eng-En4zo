@@ -6,6 +6,7 @@ import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import oauth.signpost.exception.OAuthException;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
@@ -21,8 +22,6 @@ import ca.jrvs.apps.twitter.example.JsonParser;
 public class TwitterHttpHelper implements HttpHelper{
     private OAuthConsumer consumer;
     private HttpClient httpClient;
-    private static final URI postUri = URI.create("https://api.twitter.com/2/tweets");
-    private static final URI getUri = URI.create("https://api.twitter.com/2/tweets");
 
     public TwitterHttpHelper(String consumerKey, String consumerSecret, String accessToken, String tokenSecret){
         consumer = new CommonsHttpOAuthConsumer(consumerKey,consumerSecret);
@@ -50,6 +49,14 @@ public class TwitterHttpHelper implements HttpHelper{
             throw new RuntimeException("Failed to execute", e);
         }
     }
+    @Override
+    public HttpResponse httpDelete(URI uri){
+        try {
+            return executeHttpRequest(HttpMethod.DELETE, uri, null);
+        } catch (OAuthException | IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public HttpResponse executeHttpRequest(HttpMethod method, URI uri, String s) throws OAuthException, IOException{
         if(method == HttpMethod.GET){
@@ -63,6 +70,11 @@ public class TwitterHttpHelper implements HttpHelper{
                 String requestBody = "{\"text\": \"" + s + "\"}";
                 request.setEntity(new StringEntity(requestBody));
             }
+            consumer.sign(request);
+            return httpClient.execute(request);
+
+        }else if(method == HttpMethod.DELETE){
+            HttpDelete request = new HttpDelete(uri);
             consumer.sign(request);
             return httpClient.execute(request);
 
@@ -83,7 +95,9 @@ public class TwitterHttpHelper implements HttpHelper{
         HttpHelper httpHelper = new TwitterHttpHelper(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN,TOKEN_SECRET);
         String text = "Hello World2233";
 //        HttpResponse response = httpHelper.httpPost(TwitterHttpHelper.uri, text);
-        HttpResponse response = httpHelper.httpGet(URI.create("https://api.twitter.com/2/tweets?ids=1212092628029698048&tweet.fields=attachments,author_id,context_annotations,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,source,text"));
+//        HttpResponse response = httpHelper.httpGet(URI.create("https://api.twitter.com/2/tweets?ids=1212092628029698048&tweet.fields=attachments,author_id,context_annotations,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,source,text"));
+        HttpResponse response = httpHelper.httpDelete(URI.create("https://api.twitter.com/2/tweets/1631040737457446914"));
         System.out.println(EntityUtils.toString(response.getEntity()));
+
     }
 }

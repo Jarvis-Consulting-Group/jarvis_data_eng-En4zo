@@ -14,5 +14,27 @@ public class Coordinates {
     @JsonProperty("id")
     private String id;
 
+    public String getFullName() {
+        return fullName;
+    }
 
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Coordinates{" +
+                "fullName='" + fullName + '\'' +
+                ", id='" + id + '\'' +
+                '}';
+    }
 }

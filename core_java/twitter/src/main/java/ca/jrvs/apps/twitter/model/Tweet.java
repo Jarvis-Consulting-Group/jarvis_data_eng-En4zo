@@ -13,7 +13,7 @@ import java.util.Date;
         "text",
         "entities",
         "coordinates",
-        "public_matrics",
+        "public_metrics",
 })
 public class Tweet {
     @JsonProperty("create_at")
@@ -26,14 +26,66 @@ public class Tweet {
     private Entities entities;
     @JsonProperty("coordinates")
     private Coordinates coordinates;
-    @JsonProperty("retweet_count")
-    private int retweetCount;
-    @JsonProperty("favorite_count")
-    private Integer favoriteCount;
-    @JsonProperty("favorited")
-    private boolean favorited;
-    @JsonProperty("retweeted")
-    private boolean retweeted;
+    @JsonProperty("public_metrics")
+    private PublicMetrics publicMetrics;
 
+    public Date getCreateAt() {
+        return createAt;
+    }
 
+    public void setCreateAt(Date createAt) {
+        this.createAt = createAt;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public Entities getEntities() {
+        return entities;
+    }
+
+    public void setEntities(Entities entities) {
+        this.entities = entities;
+    }
+
+    public Coordinates getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(Coordinates coordinates) {
+        this.coordinates = coordinates;
+    }
+
+    public PublicMetrics getPublicMetrics() {
+        return publicMetrics;
+    }
+
+    public void setPublicMetrics(PublicMetrics publicMetrics) {
+        this.publicMetrics = publicMetrics;
+    }
+
+    @Override
+    public String toString() {
+        return "Tweet{" +
+                "createAt=" + createAt +
+                ", id='" + id + '\'' +
+                ", text='" + text + '\'' +
+                ", entities=" + entities +
+                ", coordinates=" + coordinates +
+                ", publicMetrics=" + publicMetrics +
+                '}';
+    }
 }
