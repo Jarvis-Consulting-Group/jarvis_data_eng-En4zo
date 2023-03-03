@@ -1,50 +1,33 @@
 package ca.jrvs.apps.twitter.model;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties({
+        "properties"
+})
 @JsonPropertyOrder({
-        "place_id",
-        "full_name",
-        "id",
         "type",
         "bbox",
         "properties",
+        "place_id"
 
 })
 public class Geo {
-    @JsonProperty("fullName")
-    private String fullName;
-    @JsonProperty("id")
-    private String id;
 
     @JsonProperty("type")
     private String type;
     @JsonProperty("bbox")
-    private float[] bbox;
+    private ArrayList<Double> bbox;
+    @JsonProperty("properties")
+    private Properties properties;
     @JsonProperty("place_id")
     private String placeId;
-    @JsonProperty("properties")
-    private String properties;
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getType() {
         return type;
@@ -54,12 +37,20 @@ public class Geo {
         this.type = type;
     }
 
-    public float[] getBbox() {
+    public ArrayList<Double> getBbox() {
         return bbox;
     }
 
-    public void setBbox(float[] bbox) {
+    public void setBbox(ArrayList<Double> bbox) {
         this.bbox = bbox;
+    }
+
+    public Properties getProperties() {
+        return properties;
+    }
+
+    public void setProperties(Properties properties) {
+        this.properties = properties;
     }
 
     public String getPlaceId() {
@@ -70,23 +61,13 @@ public class Geo {
         this.placeId = placeId;
     }
 
-    public String getProperties() {
-        return properties;
-    }
-
-    public void setProperties(String properties) {
-        this.properties = properties;
-    }
-
     @Override
     public String toString() {
-        return "geo{" +
-                "fullName='" + fullName + '\'' +
-                ", id='" + id + '\'' +
-                ", type='" + type + '\'' +
-                ", bbox=" + Arrays.toString(bbox) +
+        return "Geo{" +
+                "type='" + type + '\'' +
+                ", bbox=" + bbox +
+                ", properties=" + properties +
                 ", placeId='" + placeId + '\'' +
-                ", properties='" + properties + '\'' +
                 '}';
     }
 }

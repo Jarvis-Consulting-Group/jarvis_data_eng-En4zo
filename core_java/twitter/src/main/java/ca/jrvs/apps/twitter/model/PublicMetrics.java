@@ -9,11 +9,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "retweet_count",
         "reply_count",
         "like_count",
-        "quote_count"
+        "quote_count",
+        "impression_count"
 
 })
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonIgnoreProperties(ignoreUnknown = true)
 public class PublicMetrics {
     @JsonProperty("retweet_count")
     private int retweetCount;
@@ -23,6 +24,8 @@ public class PublicMetrics {
     private int likeCount;
     @JsonProperty("quote_count")
     private int quoteCount;
+    @JsonProperty("impression_count")
+    private int impressionCount;
 
     public int getRetweetCount() {
         return retweetCount;
@@ -56,6 +59,14 @@ public class PublicMetrics {
         this.quoteCount = quoteCount;
     }
 
+    public int getImpressionCount() {
+        return impressionCount;
+    }
+
+    public void setImpressionCount(int impressionCount) {
+        this.impressionCount = impressionCount;
+    }
+
     @Override
     public String toString() {
         return "PublicMetrics{" +
@@ -63,6 +74,7 @@ public class PublicMetrics {
                 ", replyCount=" + replyCount +
                 ", likeCount=" + likeCount +
                 ", quoteCount=" + quoteCount +
+                ", impressionCount=" + impressionCount +
                 '}';
     }
 }

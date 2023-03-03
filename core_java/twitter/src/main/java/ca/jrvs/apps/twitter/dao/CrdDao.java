@@ -1,5 +1,7 @@
 package ca.jrvs.apps.twitter.dao;
 
+import ca.jrvs.apps.twitter.model.Root;
+
 public interface CrdDao<T, ID> {
 
     /**
@@ -8,6 +10,8 @@ public interface CrdDao<T, ID> {
      * @return created entity
      */
     T create(T entity);
+
+
 
     /**
      * Find an entity(Tweet) by its id
