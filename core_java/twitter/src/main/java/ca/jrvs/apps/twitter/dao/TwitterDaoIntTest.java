@@ -22,9 +22,9 @@ public class TwitterDaoIntTest {
     public static void main(String[] args) {
         TwitterDaoIntTest twitterDaoIntTest = new TwitterDaoIntTest();
         twitterDaoIntTest.setup();
-        //Root tweet = twitterDaoIntTest.dao.findById("1631716748993994756");
+        Root tweet = twitterDaoIntTest.dao.findById("1631746850054352897");
 
-        deleteRoot deleteTweet = twitterDaoIntTest.dao.deleteById("1631747183832694786");
+//        deleteRoot deleteTweet = twitterDaoIntTest.dao.deleteById("1631747183832694786");
 
 
 //        Tweet newTweet = new Tweet();
@@ -36,9 +36,9 @@ public class TwitterDaoIntTest {
 //        createRoot createTweet = twitterDaoIntTest.dao.create(newRoot);
 
         try {
-            //System.out.println(JsonUtil.toJson(tweet,true,false));
+            System.out.println(JsonUtil.toJson(tweet,true,false));
 
-            System.out.println(JsonUtil.toJson(deleteTweet,true,false));
+            //System.out.println(JsonUtil.toJson(deleteTweet,true,false));
 
             //System.out.println(JsonUtil.toJson(createTweet,true,false));
         } catch (JsonProcessingException e) {
