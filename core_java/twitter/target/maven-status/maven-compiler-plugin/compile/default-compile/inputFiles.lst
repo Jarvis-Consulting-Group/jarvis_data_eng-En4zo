@@ -1,6 +1,6 @@
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/example/dto/Company.java
-/home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/example/dto/Financial.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/controller/TwitterControllerIntTest.java
+/home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/example/dto/Financial.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/dao/readDao.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/model/Entities.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/dao/createDao.java
@@ -13,12 +13,13 @@
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/example/TwitterApiTest.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/dao/TwitterDaoIntTest.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/model/Annotation.java
+/home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/TwitterCLISpringBoot.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/service/Service.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/model/Hashtag.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/model/Tweet.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/service/TwitterServiceIntTest.java
-/home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/model/Properties.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/cli/TwitterCLIApp.java
+/home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/model/Properties.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/createModel/createData.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/model/PublicMetrics.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/controller/TwitterController.java
@@ -29,7 +30,6 @@
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/example/dto/Dividend.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/deleteModel/deleteData.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/dao/helper/HttpHelper.java
-/home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/spring/TwitterCLISpringBoot.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/dao/helper/TwitterHttpHelper.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/JsonUtil.java
 /home/centos/dev/jarvis_data_eng_Enzuo/core_java/twitter/src/main/java/ca/jrvs/apps/twitter/createModel/createRoot.java

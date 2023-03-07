@@ -19,32 +19,32 @@ public class TwitterDaoIntTest {
         this.dao = new TwitterDao(httpHelper);
     }
 
-    public static void main(String[] args) {
-        TwitterDaoIntTest twitterDaoIntTest = new TwitterDaoIntTest();
-        twitterDaoIntTest.setup();
-        Root tweet = twitterDaoIntTest.dao.findById("1631746850054352897");
-
-//        deleteRoot deleteTweet = twitterDaoIntTest.dao.deleteById("1631747183832694786");
-
-
-//        Tweet newTweet = new Tweet();
-//        newTweet.setText("This is a test of  create tweet method from Twitter Dao5");
-//        ArrayList<Tweet> newArrayTweet = new ArrayList<>();
-//        newArrayTweet.add(newTweet);
-//        Root newRoot = new Root();
-//        newRoot.setTweets(newArrayTweet);
-//        createRoot createTweet = twitterDaoIntTest.dao.create(newRoot);
-
-        try {
-            System.out.println(JsonUtil.toJson(tweet,true,false));
-
-            //System.out.println(JsonUtil.toJson(deleteTweet,true,false));
-
-            //System.out.println(JsonUtil.toJson(createTweet,true,false));
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
+//    public static void main(String[] args) {
+//        TwitterDaoIntTest twitterDaoIntTest = new TwitterDaoIntTest();
+//        twitterDaoIntTest.setup();
+//        Root tweet = twitterDaoIntTest.dao.findById("1631746850054352897");
+//
+////        deleteRoot deleteTweet = twitterDaoIntTest.dao.deleteById("1631747183832694786");
+//
+//
+////        Tweet newTweet = new Tweet();
+////        newTweet.setText("This is a test of  create tweet method from Twitter Dao5");
+////        ArrayList<Tweet> newArrayTweet = new ArrayList<>();
+////        newArrayTweet.add(newTweet);
+////        Root newRoot = new Root();
+////        newRoot.setTweets(newArrayTweet);
+////        createRoot createTweet = twitterDaoIntTest.dao.create(newRoot);
+//
+//        try {
+//            System.out.println(JsonUtil.toJson(tweet,true,false));
+//
+//            //System.out.println(JsonUtil.toJson(deleteTweet,true,false));
+//
+//            //System.out.println(JsonUtil.toJson(createTweet,true,false));
+//        } catch (JsonProcessingException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//    }
 
 }

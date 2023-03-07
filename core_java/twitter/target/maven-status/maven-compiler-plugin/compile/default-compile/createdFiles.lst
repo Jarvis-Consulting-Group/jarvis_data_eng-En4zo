@@ -1,6 +1,4 @@
-ca/jrvs/apps/twitter/example/TwitterApiTest.class
 ca/jrvs/apps/twitter/model/PublicMetrics.class
-ca/jrvs/apps/twitter/example/JsonParser.class
 ca/jrvs/apps/twitter/dao/TwitterDao.class
 ca/jrvs/apps/twitter/model/Geo.class
 ca/jrvs/apps/twitter/JsonUtil.class
@@ -29,9 +27,8 @@ ca/jrvs/apps/twitter/model/Root.class
 ca/jrvs/apps/twitter/service/TwitterService.class
 ca/jrvs/apps/twitter/model/Includes.class
 ca/jrvs/apps/twitter/deleteModel/deleteRoot.class
-ca/jrvs/apps/twitter/service/TwitterServiceIntTest.class
 ca/jrvs/apps/twitter/model/Properties.class
 ca/jrvs/apps/twitter/example/dto/Dividend.class
-ca/jrvs/apps/twitter/spring/TwitterCLISpringBoot.class
+ca/jrvs/apps/twitter/TwitterCLISpringBoot.class
 ca/jrvs/apps/twitter/spring/TwitterCLIBean.class
 ca/jrvs/apps/twitter/example/dto/Financial.class

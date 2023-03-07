@@ -26,20 +26,20 @@ public class TwitterCLIApp {
     public TwitterCLIApp(Controller controller) {this.controller = controller;}
     final private Logger logger = LoggerFactory.getLogger(TwitterCLIApp.class);
 
-    public static void main(String[] args) {
-        String  CONSUMER_KEY = System.getenv("consumerKey");
-        String  CONSUMER_SECRET = System.getenv("consumerSecret");
-        String  ACCESS_TOKEN = System.getenv("accessToken");
-        String  TOKEN_SECRET = System.getenv("tokenSecret");
-
-        HttpHelper httpHelper = new TwitterHttpHelper(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN,TOKEN_SECRET);
-        TwitterDao dao = new TwitterDao(httpHelper);
-        Service service = new TwitterService(dao);
-        Controller controller = new TwitterController(service);
-        TwitterCLIApp app = new TwitterCLIApp(controller);
-
-        app.run(args);
-    }
+//    public static void main(String[] args) {
+//        String  CONSUMER_KEY = System.getenv("consumerKey");
+//        String  CONSUMER_SECRET = System.getenv("consumerSecret");
+//        String  ACCESS_TOKEN = System.getenv("accessToken");
+//        String  TOKEN_SECRET = System.getenv("tokenSecret");
+//
+//        HttpHelper httpHelper = new TwitterHttpHelper(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN,TOKEN_SECRET);
+//        TwitterDao dao = new TwitterDao(httpHelper);
+//        Service service = new TwitterService(dao);
+//        Controller controller = new TwitterController(service);
+//        TwitterCLIApp app = new TwitterCLIApp(controller);
+//
+//        app.run(args);
+//    }
 
     public void run(String[] args){
         if (args.length == 0){
