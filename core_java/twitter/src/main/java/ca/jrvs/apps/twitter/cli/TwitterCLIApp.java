@@ -55,6 +55,9 @@ public class TwitterCLIApp {
             case "delete":
                 List<Object> deleteTweet = controller.deleteTweet(args);
                 for (int i = 0; i < deleteTweet.size(); i++){
+                    if (i % 2 == 0){
+                        System.out.println("--------------------------------------------------");
+                    }
                     try {
                         System.out.println(JsonUtil.toJson(deleteTweet.get(i),true,false));
                     } catch (JsonProcessingException e) {

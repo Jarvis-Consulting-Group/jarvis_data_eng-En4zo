@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TwitterController implements Controller{
-    private static final String COORD_SEP = ":";
     private static final String COMMA = ",";
 
     private Service service;

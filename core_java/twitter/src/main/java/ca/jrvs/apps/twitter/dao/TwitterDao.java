@@ -110,8 +110,6 @@ public class TwitterDao implements readDao<Root, String>,deleteDao<deleteRoot,St
     }
 
 
-
-
     @Override
     public Root findById(String s) {
         URI uri;
