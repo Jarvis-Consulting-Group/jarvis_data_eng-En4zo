@@ -1,7 +1,7 @@
 # Introduction
-This project implements a Java application that allows users to post, show, 
-and delete tweets on Twitter using the Twitter REST API. The TwitterApp 
-follows the MVC architecture, where the models encapsulate and manage Tweet 
+This project implements a Java application that allows users to **post**, **show**, 
+and **delete** tweets on Twitter using the **Twitter REST API V2**. The TwitterApp 
+follows the **MVC** architecture, where the models encapsulate and manage Tweet 
 objects that are displayed in JSON format. The controller layer interacts 
 with client input (args), parses it, and calls the service layer to return 
 results. The service layer handles the business logic and interacts with the 
@@ -93,7 +93,7 @@ An Inversion of Control (IoC) container/context is created, which automatically 
 The main entry point (TwitterCLIApp) is obtained from the IoC container/context, and the program is started. This approach allows for a more modular and flexible design, as dependencies can be easily managed and updated without affecting the overall structure of the application.
 # Test
 ## Deployment
-1. Login Docker
+1. Login Docker.
 2. Set the base image to be "openjdk:8-alpine".
 3. Copy the compiled JAR file into the Docker image using the "COPY" command.
 4. Set the entry point to execute the JAR file using the "ENTRYPOINT" command.
