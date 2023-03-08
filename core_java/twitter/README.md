@@ -93,14 +93,29 @@ An Inversion of Control (IoC) container/context is created, which automatically 
 The main entry point (TwitterCLIApp) is obtained from the IoC container/context, and the program is started. This approach allows for a more modular and flexible design, as dependencies can be easily managed and updated without affecting the overall structure of the application.
 # Test
 ## Deployment
-1. Compile and build the project using mvn clean install
+1. Login Docker
 2. Set the base image to be "openjdk:8-alpine".
 3. Copy the compiled JAR file into the Docker image using the "COPY" command.
 4. Set the entry point to execute the JAR file using the "ENTRYPOINT" command.
+5. Compile and build the project using mvn.
+6. Build docker image and push to docker hub.
 ```shell
+docker login
+
+cat > Dockerfile << EOF
 FROM openjdk:8-alpine
 COPY target/java_apps-1.0-SNAPSHOT.jar /usr/local/app/twitter/lib/twitter.jar
 ENTRYPOINT ["java","-jar","/usr/local/app/twitter/lib/twitter.jar"]
+EOF
+
+#Package the java app 
+mvn clean package
+
+#Build docker image locally
+docker build -t ${docker_user}/twitter .
+
+#Push to dockerhub
+docker push ${docker_user}/twitter
 ```
 # Improvements
 1. One approach is to investigate how to pass coordinates as an argument to a tweet post in the Tweet REST API v2. By allowing users to specify a location for their tweets, the application could offer location-based services that add value to the user experience.
