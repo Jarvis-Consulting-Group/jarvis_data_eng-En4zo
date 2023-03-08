@@ -50,7 +50,7 @@ en44zo/twitter post "test text"
 # Design
 ## UML diagram
 ![This is the UML diagram of the program](./assets/UML%20Relationship-Page-1.drawio.png)
-## explain each component(app/main, controller ,service, DAO)(30-50 words each)
+## Component
 - TwitterHttpHelper 
   - TwitterHttpHelper is an implementation of HttpHelper that is specifically designed to establish a 
     connection with the Twitter REST API. It does so by accepting a Uniform Resource Identifier (URI) and 
