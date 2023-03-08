@@ -104,5 +104,7 @@ ENTRYPOINT ["java","-jar","/usr/local/app/twitter/lib/twitter.jar"]
 ```
 # Improvements
 1. One approach is to investigate how to pass coordinates as an argument to a tweet post in the Tweet REST API v2. By allowing users to specify a location for their tweets, the application could offer location-based services that add value to the user experience.
+
 2. Another option is to leverage the Tweet API rather than creating custom HTTP requests from scratch. This API provides a higher-level interface for working with the Twitter platform, which could streamline development and simplify the codebase.
+
 3. Additionally, expanding the range of objects beyond tweets - to include users, media, and other entities - could create a richer user experience. Users could explore media associated with tweets or discover new users based on location or other criteria. Incorporating additional objects and functionality could help the application stand out from competitors and attract a wider user base.
