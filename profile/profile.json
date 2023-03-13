@@ -38,6 +38,15 @@
       "description": "To deepen our understanding of relational databases, relational database management systems, structured query language, optimizations, and data models, we familiarized ourselves with these concepts through hands-on work. Using DBeaver as an IDE, we practiced manipulating existing data and compared our query results with expected outcomes. The existing data was stored in a file, clubdata.sql, which was imported into a PostgreSQL database deployed in a Docker container. This hands-on approach allowed us to gain a practical understanding of the concepts and strengthen our skills in the field.",
       "git_url": "/sql",
       "name": "Manipulate an Existing Database"
+    },
+    {
+      "description": [
+        "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
+        "JDBC App: Interacting with a PostgreSQL database using the JDBC API, this project implements standard CRUD operations (Create, Read, Update, Delete) on the database, utilizing Java version 8. To simplify deployment, we create a container image using Docker to run PostgreSQL within it. The application uses java.sql packages to establish connections with the database and execute SQL statements to perform the CRUD operations. Our project code is managed using Git and GitHub, while dependencies such as the org.postgresql driver are managed using Maven.",
+        "Grep App: Implementing the widely used Linux command grep in Java using Java 8. This project is designed for anyone who wants to quickly search for strings within files. With the grep app, users can filter files and find target strings more efficiently, thereby saving time. The project utilizes Java's Stream API and lambda functions for efficient string searching within files. Maven manages dependencies, including slf4j and log4j for log management. The Java Scanner and BufferedWriter classes are used to read and write data from and to files respectively. The project is built and packaged into a jar file using Maven, and the jar file is further packaged into a Docker image for easy deployment. The Docker image is available on Docker Hub for easy access."
+      ],
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
     }
   ],
   "name": "Enzuo Mou",
