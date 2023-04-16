@@ -13,8 +13,11 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataRetrievalFailureException;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,14 +27,14 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-
+@Repository
 public class MarketDataDao implements CrudRepository<IexQuote,String> {
     private static final String IEX_BATCH_PATH = "/stock/market/batch?symbols=%S&types=quote&token=";
     private final String IEX_BATCH_URL;
     private Logger logger = LoggerFactory.getLogger(MarketDataDao.class);
     private HttpClientConnectionManager httpClientConnectionManager;
 
-
+    @Autowired
     public MarketDataDao(HttpClientConnectionManager httpClientConnectionManager, MarketDataConfig marketDataConfig) {
         this.httpClientConnectionManager = httpClientConnectionManager;
         IEX_BATCH_URL = marketDataConfig.getHost() + IEX_BATCH_PATH + marketDataConfig.getToken();
@@ -60,22 +63,24 @@ public class MarketDataDao implements CrudRepository<IexQuote,String> {
      */
     @Override
     public List<IexQuote> findAllById(Iterable<String> tickers) {
+        int count = (int) StreamSupport.stream(tickers.spliterator(),false).count();
         //convert string iterable to normal string
         String tickersParam = StreamSupport.stream(tickers.spliterator(),false
         ).collect(Collectors.joining(","));
+
         //build the url
         String url = String.format(IEX_BATCH_URL,tickersParam);
         //get response
         String response;
         try {
-            response = String.valueOf(executeHttpGet(url));
+            response = executeHttpGet(url).get();
         } catch (DataRetrievalFailureException | IOException e) {
             throw new DataRetrievalFailureException("HTTP request failed", e);
         }
 
 
         JSONObject responseJson = new JSONObject(response);
-        if (responseJson.length() == 0){
+        if (responseJson.length() == 0 || responseJson.length() != count){
             throw new IllegalArgumentException("Invalid ticker");
         }
 
