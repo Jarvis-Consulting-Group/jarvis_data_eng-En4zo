@@ -7,7 +7,9 @@ import org.springframework.dao.DataRetrievalFailureException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
@@ -29,6 +31,8 @@ public class QuoteDao implements CrudRepository<Quote, String> {
     private JdbcTemplate jdbcTemplate;
 
     private SimpleJdbcInsert simpleJdbcInsert;
+
+
 
     public QuoteDao(DataSource dataSource){
         jdbcTemplate = new JdbcTemplate(dataSource);
@@ -135,37 +139,59 @@ public class QuoteDao implements CrudRepository<Quote, String> {
     public Optional<Quote> findById(String s) {
         Quote quote;
         String selectSql = "SELECT * FROM quote WHERE ticker=?";
+
         try{
-            quote = this.jdbcTemplate.queryForObject(selectSql, Quote.class ,s);
+            RowMapper<Quote> rowMapper = BeanPropertyRowMapper.newInstance(Quote.class);
+            quote = this.jdbcTemplate.queryForObject(selectSql, rowMapper,s);
             return Optional.of(quote);
         }catch (EmptyResultDataAccessException e){
             logger.debug("Can't find quote by ticker" + s, e);
         }
         return Optional.empty();
     }
+    @Override
+    public Iterable<Quote> findAll() {
+        String selectSql = "SELECT * FROM quote";
+        RowMapper<Quote> rowMapper = BeanPropertyRowMapper.newInstance(Quote.class);
+        Iterable<Quote> quotes = this.jdbcTemplate.query(selectSql,rowMapper);
+        return quotes;
+    }
 
     @Override
     public boolean existsById(String s) {
-        return false;
+        if (findById(s).equals(Optional.empty())){
+            return false;
+        }else {
+            return true;
+        }
     }
 
-    @Override
-    public Iterable<Quote> findAll() {
-        return null;
-    }
 
     @Override
     public long count() {
-        return 0;
+        String selectSql = "SELECT count(*) FROM quote";
+        Long quoteLong = this.jdbcTemplate.queryForObject(selectSql,Long.class);
+
+        if (quoteLong == null){
+            throw new DataRetrievalFailureException("Count all quote fail");
+        }
+        return quoteLong;
+
     }
 
     @Override
     public void deleteById(String s) {
-
+        if (s == null){
+            throw new IllegalArgumentException("ID can't be null");
+        }
+        String deleteSqp = "DELETE FROM quote WHERE ticker=?";
+        this.jdbcTemplate.update(deleteSqp,s);
     }
 
     @Override
     public void deleteAll() {
+        String deleteAllSql = "DELETE FROM quote";
+        this.jdbcTemplate.update(deleteAllSql);
 
     }
 
