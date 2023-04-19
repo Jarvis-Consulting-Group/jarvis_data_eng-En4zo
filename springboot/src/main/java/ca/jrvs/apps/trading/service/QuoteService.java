@@ -92,7 +92,8 @@ public class QuoteService {
         for (IexQuote iexQuote : iexQuotes){
             quoteList.add(buildQuoteFromIexQuote(iexQuote));
         }
-        return quoteList;
+
+        return quoteDao.saveAll(quoteList);
     }
 
     /**
