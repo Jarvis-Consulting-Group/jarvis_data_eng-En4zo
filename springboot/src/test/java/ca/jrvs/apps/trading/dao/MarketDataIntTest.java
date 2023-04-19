@@ -5,8 +5,6 @@ import ca.jrvs.apps.trading.model.domain.IexQuote;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.junit.Before;
 import org.junit.Test;
-
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;

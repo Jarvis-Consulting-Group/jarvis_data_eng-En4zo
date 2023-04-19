@@ -49,12 +49,12 @@ public class QuoteService {
      *
      */
 
-    public void updateMarketData(){
+    public List<Quote> updateMarketData(){
         Iterable<Quote> quotes = findAllQuotes();
         List<String> tickers = new ArrayList<>();
         quotes.forEach(quote -> tickers.add(quote.getTicker()));
         List<Quote> quoteList = saveQuotes(tickers);
-        quoteDao.saveAll(quoteList);
+        return quoteDao.saveAll(quoteList);
     }
 
     /**

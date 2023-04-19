@@ -160,11 +160,7 @@ public class QuoteDao implements CrudRepository<Quote, String> {
 
     @Override
     public boolean existsById(String s) {
-        if (findById(s).equals(Optional.empty())){
-            return false;
-        }else {
-            return true;
-        }
+        return findById(s).isPresent();
     }
 
 
