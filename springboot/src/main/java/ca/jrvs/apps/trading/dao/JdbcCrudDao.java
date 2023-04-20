@@ -14,6 +14,7 @@ import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 
 import javax.swing.text.html.Option;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -43,6 +44,17 @@ public abstract class JdbcCrudDao <T extends Entity<Integer>> implements CrudRep
         }
         return entity;
     }
+
+    @Override
+    public <S extends T> Iterable<S> saveAll(Iterable<S> entity) {
+        List<S> entities = new ArrayList<>();
+        Iterator<S> iterator = entity.iterator();
+        while (iterator.hasNext()){
+            entities.add(save(iterator.next()));
+        }
+        return entities;
+    }
+
     private <S extends T> void addOne(S entity){
         SqlParameterSource parameterSource = new BeanPropertySqlParameterSource(entity);
         Number newId = getSimpleJdbcInsert().executeAndReturnKey(parameterSource);
@@ -109,4 +121,6 @@ public abstract class JdbcCrudDao <T extends Entity<Integer>> implements CrudRep
         String deleteAllSql = "DELETE FROM "+ getTableName();
         getJdbcTemplate().update(deleteAllSql);
     }
+
+
 }
