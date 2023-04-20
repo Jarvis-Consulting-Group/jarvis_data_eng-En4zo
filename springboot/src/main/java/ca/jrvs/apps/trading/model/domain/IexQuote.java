@@ -64,7 +64,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "currency",
         "isUSMarketOpen"
 })
-@Generated("jsonschema2pojo")
+
 public class IexQuote {
 
     @JsonProperty("symbol")
