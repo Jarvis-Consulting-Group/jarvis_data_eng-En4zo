@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sun.xml.internal.bind.v2.model.core.ID;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -21,7 +22,7 @@ public class Trader implements Entity<Integer>{
     @JsonProperty("country")
     private String country;
     @JsonProperty("dob")
-    private LocalDateTime dob;
+    private LocalDate dob;
     @JsonProperty("email")
     private String email;
     @JsonProperty("firstName")
@@ -42,12 +43,12 @@ public class Trader implements Entity<Integer>{
     }
 
     @JsonProperty("dob")
-    public LocalDateTime getDob() {
+    public LocalDate getDob() {
         return dob;
     }
 
     @JsonProperty("dob")
-    public void setDob(LocalDateTime dob) {
+    public void setDob(LocalDate dob) {
         this.dob = dob;
     }
 

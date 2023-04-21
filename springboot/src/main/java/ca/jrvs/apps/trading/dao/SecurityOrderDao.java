@@ -23,7 +23,7 @@ public class SecurityOrderDao extends JdbcCrudDao<SecurityOrder>{
     @Autowired
     public SecurityOrderDao(DataSource dataSource){
         this.jdbcTemplate = new JdbcTemplate(dataSource);
-        this.simpleInsert = new SimpleJdbcInsert(dataSource).withTableName(TABLE_NAME).usingColumns(ID_COLUMN);
+        this.simpleInsert = new SimpleJdbcInsert(dataSource).withTableName(TABLE_NAME).usingGeneratedKeyColumns(ID_COLUMN);
 
     }
 
