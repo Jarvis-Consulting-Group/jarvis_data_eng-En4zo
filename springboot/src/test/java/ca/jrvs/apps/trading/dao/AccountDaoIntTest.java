@@ -44,7 +44,7 @@ public class AccountDaoIntTest {
         savedAccount = new Account();
         savedAccount.setId(1);
         savedAccount.setAmount(10000.0);
-        savedAccount.setTraderId(1);
+        savedAccount.setTraderId(savedTrader.getId());
         accountDao.save(savedAccount);
     }
 
@@ -56,9 +56,16 @@ public class AccountDaoIntTest {
 
     @Test
     public void findAllById(){
-        List<Account> accounts = Lists.newArrayList(accountDao.findAllById(Arrays.asList(savedAccount.getId())));
+        List<Account> accounts = Lists.newArrayList(accountDao.findAllById
+                (Arrays.asList(savedAccount.getId())));
         assertEquals(1,accounts.size());
         assertEquals(savedAccount.getAmount(),accounts.get(0).getAmount());
+    }
+    @Test
+    public void findByTraderId(){
+        Account account = accountDao.findByTraderId(savedTrader.getId()).get();
+        assertEquals(account.getAmount(),savedAccount.getAmount());
+
     }
 
 

@@ -87,7 +87,7 @@ public class SecurityOrderDaoIntTest {
 
     @Test
     public void findAllById(){
-        List<SecurityOrder> orders = Lists.newArrayList(securityOrderDao.findAllById(Arrays.asList(savedOrder.getId())));
+        List<SecurityOrder> orders = Lists.newArrayList(securityOrderDao.findAllById(Arrays.asList(savedOrder.getAccountId())));
         assertEquals(1,orders.size());
         assertEquals(savedOrder.getSize(),orders.get(0).getSize());
 

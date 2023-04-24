@@ -94,5 +94,12 @@ public class PositionDaoIntTest {
         assertEquals(savedOrder.getAccountId(), positions.get(0).getAccountId());
 
     }
+    @Test
+    public void findById(){
+        Position position = positionDao.findById(savedAccount.getId()).get();
+        assertEquals(position.getPosition(),savedOrder.getSize());
+        assertEquals(position.getAccountId(),savedOrder.getAccountId());
+
+    }
 
 }

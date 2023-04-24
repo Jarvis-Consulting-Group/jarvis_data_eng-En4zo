@@ -19,7 +19,7 @@ import java.util.Optional;
 public class PositionDao implements CrudRepository<Position,Integer> {
 
     private static final String VIEW_NAME = "position";
-    private static final String ID_COLUMN_NAME = "ticker";
+    private static final String ID_COLUMN_NAME = "account_id";
     private static final Logger logger = LoggerFactory.getLogger(PositionDao.class);
     private JdbcTemplate jdbcTemplate;
 
@@ -84,6 +84,7 @@ public class PositionDao implements CrudRepository<Position,Integer> {
 
     @Override
     public void deleteById(Integer integer) {
+
         throw new UnsupportedOperationException("Not implemented");
     }
 
