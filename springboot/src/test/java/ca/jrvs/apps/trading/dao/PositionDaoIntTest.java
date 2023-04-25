@@ -12,9 +12,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.swing.text.html.Option;
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 
@@ -88,18 +88,25 @@ public class PositionDaoIntTest {
     }
 
     @Test
-    public void findAllById() {
+    public void findAll() {
         List<Position> positions = Lists.newArrayList(positionDao.findAll());
         assertEquals(1, positions.size());
         assertEquals(savedOrder.getAccountId(), positions.get(0).getAccountId());
 
     }
     @Test
-    public void findById(){
-        Position position = positionDao.findById(savedAccount.getId()).get();
-        assertEquals(position.getPosition(),savedOrder.getSize());
-        assertEquals(position.getAccountId(),savedOrder.getAccountId());
+    public void findAllById(){
+        Iterable<Position> positions = positionDao.findAllById(Collections.singletonList(savedAccount.getId()));
+        assertEquals(positions.iterator().next().getPosition(),savedOrder.getSize());
+        assertEquals(positions.iterator().next().getAccountId(),savedOrder.getAccountId());
 
+    }
+
+    @Test
+    public void findByAccountIdAndTicker(){
+        Optional<Position> position= positionDao.findByAccountIdAndTicker(savedAccount.getId(),savedOrder.getTicker());
+        assertEquals(position.get().getPosition(),savedOrder.getSize());
+        assertEquals(position.get().getAccountId(),savedOrder.getAccountId());
     }
 
 }

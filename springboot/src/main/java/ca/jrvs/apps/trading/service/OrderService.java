@@ -72,7 +72,8 @@ public class OrderService {
             securityOrder.setNotes("Unable to process the buy order, please check the amount ");
         }else{
             securityOrder.setStatus(SecurityOrder.Status.FILLED);
-            securityOrder.setNotes("Order fulfilled");
+            securityOrder.setNotes("Order fulfilled with accountId "+
+                    account.getId() + " and ticker " + marketOrderDto.getTicker());
         }
         securityOrder.setTicker(marketOrderDto.getTicker());
         securityOrder.setAccountId(account.getId());
@@ -91,7 +92,7 @@ public class OrderService {
                     account.getId() + " and ticker " + marketOrderDto.getTicker());
         }else {
             securityOrder.setStatus(SecurityOrder.Status.FILLED);
-            securityOrder.setNotes("Order fulfilled with accountId"+
+            securityOrder.setNotes("Order fulfilled with accountId "+
                     account.getId() + " and ticker " + marketOrderDto.getTicker());
         }
         securityOrder.setTicker(marketOrderDto.getTicker());
