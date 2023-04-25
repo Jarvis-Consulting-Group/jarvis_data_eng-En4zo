@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -71,9 +72,15 @@ public class TraderAccountService {
 
         Account account = accountDao.findByTraderId(traderId).get();
 
-        Optional<Position> position  = positionDao.findById(account.getId());
-        if ( (!position.equals(Optional.empty()) && position.get().getPosition() !=0) || account.getAmount() != 0.0d){
-            throw new IllegalArgumentException("trader should not have open positions and should have 0 cash balance");
+        Iterable<Position> positions  = positionDao.findAllById(Collections.singletonList(account.getId()));
+        while(positions.iterator().hasNext()){
+            Position position = positions.iterator().next();
+            if ( (position.getPosition() !=0)){
+                throw new IllegalArgumentException("trader should not have open positions");
+            }
+        }
+        if (account.getAmount() != 0.0d){
+            throw new IllegalArgumentException("trader should have 0 cash balance");
         }
 
         if (!securityOrderDao.findByAccountId(account.getTraderId()).equals(Optional.empty())){

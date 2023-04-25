@@ -13,6 +13,8 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -30,17 +32,7 @@ public class PositionDao implements CrudRepository<Position,Integer> {
 
     @Override
     public Optional<Position> findById(Integer integer) {
-        Position position;
-        String selectSql = "SELECT * FROM " + VIEW_NAME + " WHERE " +
-                ID_COLUMN_NAME + "=?";
-        try{
-            RowMapper<Position> rowMapper = BeanPropertyRowMapper.newInstance(Position.class);
-            position = this.jdbcTemplate.queryForObject(selectSql,rowMapper,integer);
-            return Optional.of(position);
-        }catch (EmptyResultDataAccessException e){
-            logger.debug("Can't find position by ticker" + integer, e);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     @Override
@@ -78,8 +70,35 @@ public class PositionDao implements CrudRepository<Position,Integer> {
     }
 
     @Override
-    public Iterable<Position> findAllById(Iterable<Integer> iterable) {
-        throw new UnsupportedOperationException("Not implemented");
+    public Iterable<Position> findAllById(Iterable<Integer> ids) {
+        List<Position> positions = new ArrayList<>();
+        String selectSql = "SELECT * FROM " + VIEW_NAME + " WHERE " +
+                ID_COLUMN_NAME + "=?";
+        Integer id = ids.iterator().next();
+
+        try{
+            RowMapper<Position> rowMapper = BeanPropertyRowMapper.newInstance(Position.class);
+            positions = this.jdbcTemplate.query(selectSql,rowMapper,id);
+
+        }catch (EmptyResultDataAccessException e){
+            logger.debug("Can't find position by ticker" + id, e);
+        }
+        return positions;
+    }
+
+    public Optional<Position> findByAccountIdAndTicker(Integer accountId, String ticker) {
+        Position position;
+        String selectSql = "SELECT * FROM " + VIEW_NAME + " WHERE " +
+                ID_COLUMN_NAME + "=? AND ticker=?";
+        Object[] searchObject = {accountId,ticker};
+        try{
+            RowMapper<Position> rowMapper = BeanPropertyRowMapper.newInstance(Position.class);
+            position = this.jdbcTemplate.queryForObject(selectSql,rowMapper,searchObject);
+            return Optional.of(position);
+        }catch (EmptyResultDataAccessException e){
+            logger.debug("Can't find position by accountId " + accountId + " and ticker" + ticker, e);
+        }
+        return Optional.empty();
     }
 
     @Override
