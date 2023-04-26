@@ -99,7 +99,7 @@ public class TraderAccountController {
     })
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    @PostMapping(path = "/withdraw/traderId/{traderId}/amount/{amount}")
+    @PutMapping(path = "/withdraw/traderId/{traderId}/amount/{amount}")
     public Account withdrawFund(@PathVariable Integer traderId, @PathVariable Double amount){
         try{
             return traderAccountService.withdraw(traderId,amount);
