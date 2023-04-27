@@ -25,8 +25,6 @@ public class SecurityOrderDao extends JdbcCrudDao<SecurityOrder>{
     private JdbcTemplate jdbcTemplate;
     private SimpleJdbcInsert simpleInsert;
 
-    private AccountDao accountdao;
-
     @Autowired
     public SecurityOrderDao(DataSource dataSource){
         this.jdbcTemplate = new JdbcTemplate(dataSource);

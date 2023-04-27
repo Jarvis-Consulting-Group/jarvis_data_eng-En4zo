@@ -24,7 +24,7 @@ import static org.junit.Assert.assertEquals;
 @Sql({"classpath:schema.sql"})
 public class AccountDaoIntTest {
     @Autowired
-    private AccountDao accountDao;
+    private AccountJpaDao accountJpaDao;
     @Autowired
     private TraderDao traderDao;
     private Account savedAccount;
@@ -45,25 +45,25 @@ public class AccountDaoIntTest {
         savedAccount.setId(1);
         savedAccount.setAmount(10000.0);
         savedAccount.setTraderId(savedTrader.getId());
-        accountDao.save(savedAccount);
+        accountJpaDao.save(savedAccount);
     }
 
     @After
     public void deleteOne(){
-        accountDao.deleteAll();
+        accountJpaDao.deleteAll();
         traderDao.deleteAll();
     }
 
     @Test
     public void findAllById(){
-        List<Account> accounts = Lists.newArrayList(accountDao.findAllById
+        List<Account> accounts = Lists.newArrayList(accountJpaDao.findAllById
                 (Arrays.asList(savedAccount.getId())));
         assertEquals(1,accounts.size());
         assertEquals(savedAccount.getAmount(),accounts.get(0).getAmount());
     }
     @Test
     public void findByTraderId(){
-        Account account = accountDao.findByTraderId(savedTrader.getId()).get();
+        Account account = accountJpaDao.getAccountByTraderId(savedTrader.getId());
         assertEquals(account.getAmount(),savedAccount.getAmount());
 
     }
