@@ -13,6 +13,11 @@
   "github_repo_root_url": "https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-En4zo",
   "highlighted_projects": [
     {
+      "description": "Developed a web application using Django as the back-end framework and Apache ECharts for data visualization and stock trad ing history. My full-stack web development skills in HTML,CSS, and Javascript were utilized to design a RESTful back-end server for storing stock information persistently in MySQL.",
+      "git_url": null,
+      "name": "Stock Data Analysis System"
+    },
+    {
       "description": "Realized inter-thread communication mechanism using Java Sockets and RMI to allow different processes/thread to communicate over TCP/IP network. Compared different page replacement algorithms in a centralized system that uses virtual memory. Used a distributed system and implemented each page replacement algorithm on particular computer server.",
       "git_url": null,
       "name": "Distributed System and Inter-Thread Communication Mechanism(Java)"
@@ -47,6 +52,16 @@
       ],
       "git_url": "/core_java",
       "name": "Core Java Apps"
+    },
+    {
+      "description": "Integrate a trading platform with a REST API that front-end applications can consume, enabling users to manage client profiles and accounts, monitor portfolio performance, and execute securities trades efficiently. Utilize Java 8 and Spring Boot for the implementation of the REST API, encompassing the platform's core business logic, such as managing trader profiles, executing security orders, and monitoring portfolio performance. Ensure data persistence with a PostgreSQL database. Acquire market data from IEX Cloud, a service that provides free access to market data through its REST API, and incorporate it into the Spring Boot application.",
+      "git_url": "/springboot",
+      "name": "Springboot App"
+    },
+    {
+      "description": "Explore and evaluate Hadoop's capabilities, specifically Apache Hive, to solve complex business problems using distributed computing. Gain proficiency in core Hadoop components, such as MapReduce, HDFS, and YARN, by provisioning a Hadoop cluster on Google Cloud Platform using Dataproc. Utilize Apache Hive and the Zeppelin Notebook to practice various HiveQL queries, compare methodologies, and optimize data retrieval, storage, and access.",
+      "git_url": "/hadoop",
+      "name": "Hadoop"
     }
   ],
   "name": "Enzuo Mou",
@@ -63,15 +78,9 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Joined Jarvis as a junior software developer to develop, consult, and assist customers with their software solutions. I work in an Agile/Scrum development environment, where I participate in daily scrum meetings with the scrum master to discuss project progress. And our sprint meeting held every two weeks. At Jarvis, I have gained exposure to various technologies commonly used in professional technical environments, such as Java, RDBMS, Linux, Docker, Spring Boot, etc.",
+      "description": "Joined Jarvis as a junior software developer to develop, consult, and assist customers with their software solutions. I work in an Agile/Scrum development environment, where I participate in daily scrum meetings with the scrum master to discuss project progress. And our sprint meeting held every two weeks. At Jarvis, I have gained exposure to various technologies commonly used in professional technical environments, such as Java, RDBMS, Linux, Docker, SpringBoot, Hadoop, etc.",
       "duration": "Jan 2022-present",
       "title": "Junior Software Developer"
-    },
-    {
-      "company": "Poros Consulting",
-      "description": "Assigned to implement a stock data analysis system. Adhering to the Agile methodology, I regularly updated my supervisor on my progress. I developed the web application using Django as the back-end framework and Apache ECharts for data visualization and stock trading history. My full-stack web development skills in HTML, CSS, and Javascript were utilized to design a RESTful back-end server for storing stock information persistently in MySQL. Throughout the project, I also created technical documents and prepared presentations to showcase my work to my supervisor. After completion, I presented the implemented components and demonstrated the functionality of the web application.",
-      "duration": "July2022-Nov2022",
-      "title": "Software Engineer"
     },
     {
       "company": "Start Computer Equipment Corporation",
