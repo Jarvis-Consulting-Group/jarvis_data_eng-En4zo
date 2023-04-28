@@ -93,7 +93,6 @@ We have opted to use Java 8 and Spring Boot for the implementation of the REST A
     - ENTRYPOINT ["java","-jar","/usr/local/app/trading/lib/trading_app.jar"]: This line defines the entry point for the Docker container when it is run, which is to execute the java command with the -jar flag followed by the path to the JAR file.
 
 # Improvements
-If you have more time, what would you improve?
 - Implement All Daos with JPA(Java Persistent API): We can make use of JPA's features to simplify the data access layer and reduce boilerplate code. JPA is a standard for object-relational mapping (ORM) in Java applications and provides a way to map Java objects to database tables, making it easier to interact with the database.
 - We can enhance our application by fetching additional real-time information from IEX Cloud and storing it in PostgreSQL. This would enable us to create visualizations and diagrams in the frontend for improved user experience and data analysis.
 - Implement a function to add and update all tickers from the IEX Cloud to the database. Additionally, enhance the daily list by dividing it into blocks (e.g., based on industry). This will enable more efficient organization and filtering of data, providing users with a better overview of the market and improving the overall user experience.
