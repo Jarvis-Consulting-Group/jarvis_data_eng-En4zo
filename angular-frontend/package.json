@@ -1,0 +1,11 @@
+{
+  "name": "angular_todo_app",
+  "version": "1.0.0",
+  "description": "This project is under development. Since this project follows the GitFlow, the final work will be merged to the master branch after the Team Code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "enzo",
+  "license": "ISC"
+}
