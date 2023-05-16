@@ -1,0 +1,11 @@
+<p>to-do-page works!</p>
+
+<form (ngSubmit)="addToDo()">
+    <input [(ngModel)]="todo" name="todo">
+    <button type="submit">Submit</button>
+</form>
+
+
+<li *ngFor="let todo of todos; let i=index">{{todo}}
+    <button type="button" (click)="deleteToDo(i)">Delete</button>
+</li>
