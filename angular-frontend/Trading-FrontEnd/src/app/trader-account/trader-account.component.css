@@ -1,0 +1,33 @@
+.name{
+    display: flex;
+    background-color: aqua;
+    width: 400px
+    ;
+    
+}
+.name div{
+    margin-right: 100px;    
+}
+
+.dobAndCountry{
+    display: flex;
+    background-color: blueviolet;
+    width: 400px;
+}
+.dobAndCountry div{
+    margin-right: 100px;
+}
+.email{
+    width: 400px;
+    background-color: brown;
+}
+
+.traderAccount{
+    display: flex;
+    margin-right: 200px;
+}
+
+.buttons{
+    display: flex;
+    margin-left: 200px;
+}

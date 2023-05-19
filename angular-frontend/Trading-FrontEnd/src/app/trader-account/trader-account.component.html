@@ -1,0 +1,49 @@
+<h1>Trader Account</h1>
+<body>
+    <div class="traderAccount">
+        <div>
+            <div class="name">
+                <div class="firstName">
+                    <label>First Name</label>
+                    <p>{{trader?.firstName}}</p>
+                </div>
+                <div class="lastName">
+                    <label> Last Name</label>
+                    <p>{{trader?.lastName}}</p>
+                </div>
+            </div>
+            <div class="email">
+                <div>
+                    <label>Email</label>
+                    <p>{{trader?.email}}</p>
+                </div>
+            </div>
+            <div class="dobAndCountry">
+                <div>
+                    <label>Date of Birth</label>
+                    <p>{{trader?.dob}}</p>
+                </div>
+                <div>
+                    <label>Country</label>
+                    <p>{{trader?.country}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p>Amount</p>
+            <p>{{trader?.amount}}</p>
+        </div>
+
+        <div class="buttons">
+            <div>
+                <button (click)="openDepositDialog()">Depostie Funds</button>
+            </div>
+            <div>
+                <button (click)="openWithDrawDialog()">Withdraw Funds</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+

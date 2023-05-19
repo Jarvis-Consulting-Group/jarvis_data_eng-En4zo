@@ -1,0 +1,6 @@
+<h1>Withdraw For The Account</h1>
+<form [formGroup]="withDrawForm" (ngSubmit)="onSubmit()">
+    <label for="amount">Amount:</label>
+    <input id="amount" type="text" formControlName="amount">
+    <button type="submit">Submit</button>
+</form>

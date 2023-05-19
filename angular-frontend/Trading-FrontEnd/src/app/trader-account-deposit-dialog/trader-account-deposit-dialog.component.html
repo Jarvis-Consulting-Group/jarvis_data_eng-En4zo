@@ -1,0 +1,9 @@
+<h1>Depostie For The Account</h1>
+<form [formGroup]="depositForm" (ngSubmit)="onSubmit()">
+    <label for="amount">Amount:</label>
+    <input id="amount" type="text" formControlName="amount">
+    <button type="submit">Submit</button>
+</form>
+
+
+
