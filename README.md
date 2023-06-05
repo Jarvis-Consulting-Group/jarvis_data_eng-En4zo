@@ -1,12 +1,13 @@
 # Enzuo Mou . Jarvis Consulting
 
-I am a recent graduate from Queen's University with a Bachelor's degree in Computer Science. I possess a solid foundation in fundamental concepts such as data structures, algorithms, and RDBMS. My practical experience includes an internship at a computer equipment company where I developed a user management page and a search and delete function for a bank evaluation machine's evaluation system. Additionally, I have experience building a webapp for stock data analysis, demonstrating my ability to apply my technical skills to real-world projects. I possess strong coding, self-learning, and problem-solving skills, as demonstrated by my ability to quickly learn and apply new technologies. I believe that the operation of modern society is closely tied to computer technology, making it essential to have a deep understanding of it. I find great satisfaction in finding and resolving bugs while programming. My education and experiences have prepared me well for a career as a junior software engineer, and I am excited to begin my full-time career in this field.
+As a Computer Science graduate from Queen's University, I bring strong technical skills developed through diverse project experiences. I've designed and built an interactive prompt sharing website using Next.js, MongoDB, NextAuth, and Tailwind CSS, showcasing my full-stack development skills. My previous experience includes developing a user management system at a computer equipment company and building a stock data analysis web application.
+My proficiency spans Java, Python, JavaScript/TypeScript, Springboot, React, Angular, NextJs, and Django, with competence in tools like Git/Github, Docker, and agile methodologies. Passionate about computer technology's impact on society, I'm equipped with strong problem-solving skills and a knack for bug resolution. As an enthusiastic junior software engineer, I look forward to contributing to innovative technology solutions in my future career.
 
 ## Skills
 
-**Proficient:** Java, Python, Linux/Bash/Shell, Django, RDBMS/SQL, Agile/Scrum, Git/Github
+**Proficient:** Java, Springboot, RDBMS/SQL, React, Angular, NextJs, Node.js, JavaScript/TypeScript, Python, Django
 
-**Competent:** Javascript, Docker, HTML/CSS, Networking, Springboot
+**Competent:** Git/Github, Docker, HTML/CSS, Networking, Linux/Bash/Shell, Agile/Scrum
 
 **Familiar:** Machine Learning/Deep Learning, Google Cloud Platform, Echarts, C, Numpy, Pandas, Opencv, Pytorch
 
@@ -31,6 +32,8 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 
 ## Highlighted Projects
+**Prompt Sharing Website** [[GitHub](https://github.com/En4zo/prompt_sharing)]: Designed and built an interactive prompt sharing website using Next.js for front-end and back-end functionality, integrating MongoDB as the database. Implemented NextAuth for secure user authentication and Tailwind CSS to create a responsive, modern interface. Users can post, share, and view prompts, while their personal profile allows access to their individual posts upon login. The platform fosters community engagement, creativity, and knowledge sharing with a seamless and secure user experience.
+
 **Stock Data Analysis System**: Developed a web application using Django as the back-end framework and Apache ECharts for data visualization and stock trad ing history. My full-stack web development skills in HTML,CSS, and Javascript were utilized to design a RESTful back-end server for storing stock information persistently in MySQL.
 
 **Distributed System and Inter-Thread Communication Mechanism(Java)**: Realized inter-thread communication mechanism using Java Sockets and RMI to allow different processes/thread to communicate over TCP/IP network. Compared different page replacement algorithms in a centralized system that uses virtual memory. Used a distributed system and implemented each page replacement algorithm on particular computer server.
@@ -42,7 +45,7 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 ## Professional Experiences
 
-**Junior Software Developer, Jarvis (Jan 2022-present)**: Joined Jarvis as a junior software developer to develop, consult, and assist customers with their software solutions. I work in an Agile/Scrum development environment, where I participate in daily scrum meetings with the scrum master to discuss project progress. And our sprint meeting held every two weeks. At Jarvis, I have gained exposure to various technologies commonly used in professional technical environments, such as Java, RDBMS, Linux, Docker, SpringBoot, Hadoop, etc.
+**Junior Software Developer, Jarvis (Jan 2022-present)**: Joined Jarvis as a junior software developer to develop, consult, and assist customers with their software solutions. I work in an Agile/Scrum development environment, where I participate in daily scrum meetings with the scrum master to discuss project progress. And our sprint meeting held every two weeks. At Jarvis, I have gained exposure to various technologies commonly used in professional technical environments, such as Java, RDBMS, Linux, Docker, SpringBoot, React, Angular, Hadoop, etc.
 
 **Software Engineer, Start Computer Equipment Corporation (July2021-Sep2021)**: Tasked with comprehending the framework of the bank evaluation machine's management system and designing the user management page. The management system was implemented using Java and Spring Boot. I successfully completed the user management page, including adding the ability to query machines based on time, region, and relevant data stored in a MySQL database. Daily progress was reported to my instructor, and I also participated in weekly technology-sharing meetings with the team where the team leader would share interesting new projects and emerging technologies on Github with everyone.
 

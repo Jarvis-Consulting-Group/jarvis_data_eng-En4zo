@@ -5,16 +5,15 @@ github_repo_root_url: https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: I am a recent graduate from Queen's University with a Bachelor's degree in Computer Science. I possess a solid foundation in
-  fundamental concepts such as data structures, algorithms, and RDBMS. My practical experience includes an internship at a
-  computer equipment company where I developed a user management page and a search and delete function for a bank evaluation
-  machine's evaluation system. Additionally, I have experience building a webapp for stock data analysis, demonstrating my
-  ability to apply my technical skills to real-world projects. I possess strong coding, self-learning, and
-  problem-solving skills, as demonstrated by my ability to quickly learn and apply new technologies. I believe that the 
-  operation of modern society is closely tied to computer technology, making it essential to
-  have a deep understanding of it. I find great satisfaction in finding and resolving bugs while programming. My education and
-  experiences have prepared me well for a career as a junior software engineer, and I am excited to begin my full-time career
-  in this field.
+summary: As a Computer Science graduate from Queen's University, I bring strong technical skills developed through diverse project 
+  experiences. I've designed and built an interactive prompt sharing website using Next.js, MongoDB, NextAuth, and Tailwind CSS, 
+  showcasing my full-stack development skills. My previous experience includes developing a user management system at a computer 
+  equipment company and building a stock data analysis web application.
+
+  My proficiency spans Java, Python, JavaScript/TypeScript, Springboot, React, Angular, NextJs, and Django, with competence in tools 
+  like Git/Github, Docker, and agile methodologies. Passionate about computer technology's impact on society, I'm equipped with strong 
+  problem-solving skills and a knack for bug resolution. As an enthusiastic junior software engineer, I look forward to contributing 
+  to innovative technology solutions in my future career.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -22,19 +21,23 @@ skills:
   # At least 5 skills
   proficient:
     - Java
-    - Python
-    - Linux/Bash/Shell
-    - Django
+    - Springboot
     - RDBMS/SQL
-    - Agile/Scrum
-    - Git/Github
+    - React
+    - Angular
+    - NextJs
+    - Node.js
+    - JavaScript/TypeScript
+    - Python
+    - Django
   # At least 5 skills
   competent:
-    - Javascript
+    - Git/Github
     - Docker
     - HTML/CSS
     - Networking
-    - Springboot
+    - Linux/Bash/Shell
+    - Agile/Scrum
   # At least 5 skills
   familiar:
     - Machine Learning/Deep Learning
@@ -81,6 +84,9 @@ jarvis_projects:
 # List of personal or academic projects
 # Feel free to add more projects
 highlighted_projects:
+  - name: "Prompt Sharing Website"
+    git_url: "https://github.com/En4zo/prompt_sharing"
+    description: Designed and built an interactive prompt sharing website using Next.js for front-end and back-end functionality, integrating MongoDB as the database. Implemented NextAuth for secure user authentication and Tailwind CSS to create a responsive, modern interface. Users can post, share, and view prompts, while their personal profile allows access to their individual posts upon login. The platform fosters community engagement, creativity, and knowledge sharing with a seamless and secure user experience.
   - name: "Stock Data Analysis System"
     git_url:
     description: Developed a web application using Django as the back-end framework and Apache ECharts for data visualization and stock trad ing history. My full-stack web development skills in HTML,CSS, and Javascript were utilized to design a RESTful back-end server for storing stock information persistently in MySQL.
@@ -109,7 +115,7 @@ professional_experience:
     description: "Joined Jarvis as a junior software developer to develop, consult, and assist customers with their software solutions. 
     I work in an Agile/Scrum development environment, where I participate in daily scrum meetings with the scrum master to discuss project 
     progress. And our sprint meeting held every two weeks. At Jarvis, I have gained exposure to various 
-    technologies commonly used in professional technical environments, such as Java, RDBMS, Linux, Docker, SpringBoot, Hadoop, etc."
+    technologies commonly used in professional technical environments, such as Java, RDBMS, Linux, Docker, SpringBoot, React, Angular, Hadoop, etc."
   - title: "Software Engineer"
     company: "Start Computer Equipment Corporation"
     duration: "July2021-Sep2021"
